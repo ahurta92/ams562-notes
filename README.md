@@ -17,8 +17,8 @@ All examples and materials in this repository are free to use and distributed un
 ## How to Compile
 
 ```console
-$ pip3 install -r requirements.txt --user
-$ make html latex
-$ cd _build/latex
-$ make &>/dev/null || echo "failed compiling latex"
+pip3 install -r requirements.txt --user
+make html latex
+cd _build/latex
+make &>/dev/null || echo "failed compiling latex"
 ```
