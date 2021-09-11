@@ -490,9 +490,9 @@ Constexpr
 :code:`constexpr` which means evaluated at compile time.  
 
 * Used to specify constants.
-* Allow placement of data in read-only memomory 
+* Allow placement of data in read-only memory 
 * Improve performance (run-time calculcation)
-* Values of :code:`constexpr` must be calculated at runtime. 
+* Values of :code:`constexpr` must be calculated at compile time. 
 
 
 .. code-block:: cpp
@@ -513,6 +513,9 @@ to define them as constexpr.
 .. note:: 
     Which of the following lines of code will compile and why?
 
+Example const_constexpr.cpp
++++++++++++++++++++++++++++++++++++++++
+
 .. code-block:: cpp
 
     constexpr double square(double x){return x*x;}
@@ -520,9 +523,16 @@ to define them as constexpr.
     constexpr double m2=1.4*square(var);
 
 
+The difference between :code:`const` and :code:`constexpr` is that :code:`constexpr`
+can also be applied to functions and class constructors.  It indicates that the value, 
+or return value, is constant and computed at compile time.  
+
+When a value is computd at compile time instead of run time, it helps your program
+run faster and use less memory
+
 .. _lec1_array:
 
-Array and Pointers
+Array 
 --------------------------
 
 
@@ -557,18 +567,6 @@ right-hand side must be no larger than the actual array size. Checkout and
 run :nblec_1:`array`.
 
 
-A **pointer** is an address to an object. A pointer can be declared as like this:
-
-.. code-block:: cpp
-    
-    char* p;  // pointer to character 
-
-A pointer variable holds the address of an object of the appropriate type.
-
-.. code-block:: cpp
-
-    char* p = &v[3];  // pointer to character 
-    char x = *p;  // pointer to character 
 
 Accessing Array Elements
 ++++++++++++++++++++++++
@@ -608,6 +606,9 @@ We can also use pointers to access the elements of arrays.
 
 .. image:: images/array_pointer.png
 
+Example copy_array.cpp
++++++++++++++++++++++++++++++++++++
+
 Consider copying ten elements from one array to another:
 
 .. code-block:: cpp
@@ -626,6 +627,10 @@ Consider copying ten elements from one array to another:
 * set i equal to zero 
 * while i is not 10
 * copy the ith element and increment i
+
+
+Example print_array.cpp
++++++++++++++++++++++++++++++++++++
 
 We can also use range-for-statement to access the elements of an array
 
@@ -646,8 +651,6 @@ We can also use range-for-statement to access the elements of an array
 * for every element of **v**
 * from the first to the last
 * place a copy in **x** and print it
-
-
 
     
 
