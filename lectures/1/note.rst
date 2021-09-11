@@ -527,7 +527,7 @@ The difference between :code:`const` and :code:`constexpr` is that :code:`conste
 can also be applied to functions and class constructors.  It indicates that the value, 
 or return value, is constant and computed at compile time.  
 
-When a value is computd at compile time instead of run time, it helps your program
+When a value is computed at compile time instead of run time, it helps your program
 run faster and use less memory
 
 .. _lec1_array:
