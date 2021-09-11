@@ -3,7 +3,7 @@
 
 int main() {
 
-  int *bad_ptr = 3;   // doesn't make sense  we have no memomory
+  // int *bad_ptr = 3;   // doesn't make sense  we have no memory
   int *ptr = new int; // points to int allocated on the heap
 
   *ptr = 3;

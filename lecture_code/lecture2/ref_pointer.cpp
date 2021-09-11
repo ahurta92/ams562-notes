@@ -5,9 +5,9 @@ void print(int i) { std::cout << i << std::endl; }
 
 int main() {
 
-  double tol = 1e-6;
-  double &tol_ref = tol;
-  double *tol_ptr = &tol;
+  double tol = 1e-6;      //
+  double &tol_ref = tol;  // ref to tol
+  double *tol_ptr = &tol; // point to address ref by tol
 
   tol_ref = 1e-2;
   std::cout << tol << std::endl;      // what is the output?

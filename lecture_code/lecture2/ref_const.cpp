@@ -8,6 +8,7 @@ int main() {
   const double tol = 1e-2;
 
   double &tol_ref = tol; // error!
+  tol_ref = 3;
 
   char &A = 'A'; // error ! binding address to temporary char
 

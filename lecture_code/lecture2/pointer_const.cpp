@@ -3,8 +3,8 @@
 
 int main() {
   const int a = 1;
-  const int *p2c = &a;
-  *p2c = 2;      // ERROR! a is constant
+  int *p2c = &a;
+  // *p2c = 2;      // ERROR! a is constant
   p2c = nullptr; // fine
                  ///
   int b = 2;
