@@ -22,14 +22,16 @@ Operators & Operations
 Elementary Arithmetic Operators
 -------------------------------
 
-For most :ref:`built-in types <lec1_builtin>`, we have elementary operations
+For most :ref:`built-in types <lec1_builtin>` fundamental types, we have elementary operations
 such as *addition*, *subtraction*, *multiplication*, *division*, and *modulus*.
 
-1. :code:`+`: the addition operator
-2. :code:`-`: the subtraction operator
-3. :code:`*`: the multiplication operator
-4. :code:`/`: the division operator
-5. :code:`%`: the modulus operator
+1. :code:`x+y`: the addition operator
+2. :code:`+x` : unary plus
+3. :code:`x-y`: the subtraction operator
+2. :code:`+x` : unary minus
+4. :code:`x*y`: the multiplication operator
+5. :code:`x/y`: the division operator
+6. :code:`%`: remainder (modulus) for integers  
 
 .. note::
 
@@ -38,6 +40,9 @@ such as *addition*, *subtraction*, *multiplication*, *division*, and *modulus*.
 
 Be aware that the modulus operator only works for integers in `C++`_, this is
 unlike `Python`_, where the operator is also applicable to floating numbers.
+
+Example modulus_remainder.cpp
++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: cpp
 
@@ -48,6 +53,9 @@ unlike `Python`_, where the operator is also applicable to floating numbers.
 
 Also, for the division operator, the behaviors for integers and floating
 numbers are different.
+
+Example truncation.cpp
++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: cpp
 
@@ -80,6 +88,21 @@ There are so-called *compound assignment operators*, and you under these by the
 following expression: :code:`A?=B` for :code:`?` :math:`\in`
 :code:`{+,-,*,/,%}` is equivalent to :code:`A=A?B`.
 
+Example assignment_operators.cpp
++++++++++++++++++++++++++++++++++++++
+
+
+.. code-block:: cpp
+
+    int a = 0;
+    int b = 2;
+
+    int c = a + b;
+    c *= b; // c=c*2
+    c -= b; // c=c-2
+    c /= b; // c=c/2
+    std::cout << "c = " << c << std::endl
+
 .. _lec3_inc_dec_ops:
 
 Increment & Decrement Operators
@@ -99,19 +122,12 @@ These operators can be used as suffixes, e.g.
 .. code-block:: cpp
 
     int a = 0;
-    a++;
+    a++; // a = a+1  postincrement
     std::cout << a; // print out 1
 
 **Post- increment/decrement operators modify the value of the target object
 after processing the current statement.**
 
-.. code-block:: cpp
-
-    int a = 0;
-    int b = a++;
-    std::cout << "a=" << a;
-    std::cout << "b=" << b;
-    // what is a? what is b? try this!
 
 
 Use as Prefix
@@ -122,23 +138,60 @@ These operators, of course, can be used as prefixes, e.g.
 .. code-block:: cpp
 
     int a = 0;
-    --a;
+    --a;  // preincrement
     std::cout << a; // print out -1
 
 
 **Pre- increment/decrement operators modify the value of the target object
 before processing the current statement.**
 
+Example assignment_operators.cpp
++++++++++++++++++++++++++++++++++++++
+
+What will each line print out?
+
+
 .. code-block:: cpp
 
     int a = 0;
-    int b = --a;
-    std::cout << "a=" << a;
-    std::cout << "b=" << b;
-    // what is a? what is b? try this!
+    std::cout << "a = " << a << std::endl;
+    std::cout << "a = " << a++ << std::endl;
+    std::cout << "a = " << ++a << std::endl
 
-An Exercise
-+++++++++++
+Example pre_increment.cpp
++++++++++++++++++++++++++++++++++++++
+
+What is the output of a, b, and c?
+
+.. code-block:: cpp
+
+  int a = 0;
+  int b = --a;
+  int c = 0;
+  c = --a;
+
+  // What will each operator print out?
+  std::cout << "a = " << a << std::endl;
+  std::cout << "b = " << b << std::endl;
+  std::cout << "c = " << c << std::endl;
+
+Example post_increment.cpp
++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: cpp
+
+  int a = 0;
+  int b = a--;
+  int c = 0;
+  c = a--;
+
+  // What will each operator print out?
+  std::cout << "a = " << a << std::endl;
+  std::cout << "b = " << b << std::endl;
+  std::cout << "c = " << c << std::endl;
+
+An Exercise increment_exercise.cpp
+++++++++++++++++++++++++++++++++++++++
 
 Take a look at the following program:
 
@@ -155,7 +208,6 @@ Take a look at the following program:
               << "i3 = " << i3 << "\n"
               << "i4 = " << i4 << "\n";
 
-Run this example in :nblec_3:`inc_dec`.
 
 .. _lec3_logic_ops:
 
@@ -164,22 +216,31 @@ Comparison & Logical Operations
 
 To compare two values, you need to use comparison operators in `C++`_:
 
-1. :code:`<`: strictly less than
-2. :code:`>`: strictly greater than
-3. :code:`<=`: less than or equal to
-4. :code:`>=`: greater than or equal to
-5. :code:`==`: equal to
-6. :code:`!=`: not equal to
+1. :code:`x<y`: strictly less than
+2. :code:`x>y`: strictly greater than
+3. :code:`x<=y`: less than or equal to
+4. :code:`x>=y`: greater than or equal to
+5. :code:`x==y`: equal to
+6. :code:`x!=y`: not equal to
 
 The resulting object of the comparison operators are boolean flags, i.e. either
 :code:`true` or :code:`false`.
 
 For logical operators, we have:
 
-1. :code:`&&`: logical and
-2. :code:`||`: logical or
-3. :code:`!`: logical not (use as unary operator)
-4. :code:`^`: logical xor
+1. :code:`x&&y`: logical and
+2. :code:`x||y`: logical or
+3. :code:`!x`: logical not (use as unary operator)
+4. :code:`x&y`: bitwise and 
+5. :code:`x|y`: bitwise or
+6. :code:`x^y`: bitwise exclusive or
+7. :code:`^x`: bitwise complement 
+
+A bitwise logical operator yields the result of the operand type
+for which the operation has been performed on each bit.
+
+The logical :code:`&&` and :code:`||` returns true or false 
+depending on the values of the operands. 
 
 .. note::
 
@@ -187,6 +248,9 @@ For logical operators, we have:
     operator. However, since ``true`` can be converted into integer 1 and
     0 for ``false``, and :code:`1^0=1`, :code:`1^1=0`, and :code:`0^0=0`,
     which behave exactly like an xor operation.
+
+Example logical_operators0.cpp
+++++++++++++++++++++++++++++++++++++++
 
 .. code-block:: cpp
 
@@ -196,6 +260,40 @@ For logical operators, we have:
     std::cout << "either 10>2 or 5>2 but not both: " << ((10>2)^(5>2));
 
 Try out comparison and logical operators in :nblec_3:`logi_comp`.
+
+Example logical_operators.cpp
+++++++++++++++++++++++++++++++++++++++
+
+.. code-block:: cpp
+
+  int a = -0b1011; // -11
+  int c = 0b1000;  // 42944967285
+
+  unsigned b = a;
+  std::cout << "a  = " << a << std::endl;
+  std::cout << "b  = " << b << std::endl;
+  std::cout << "c  = " << c << std::endl;
+
+  // and
+  std::cout << "(a && b) = " << (a && b) << std::endl;
+  std::cout << "(a && c) = " << (a && c) << std::endl;
+
+  // or
+  std::cout << "(a || b) = " << (a || b) << std::endl;
+  std::cout << "(a || c) = " << (a || c) << std::endl;
+
+  // comparision
+  std::cout << "(a == b) = " << (a == b) << std::endl;
+  std::cout << "(a == c) = " << (a == c) << std::endl;
+  // bitwise and
+  std::cout << "(a & b) = " << (a & b) << std::endl;
+  std::cout << "(a & c) = " << (a & c) << std::endl;
+  // bitwise or
+  std::cout << "(a | b) = " << (a | b) << std::endl;
+  std::cout << "(a | c) = " << (a | c) << std::endl;
+  // bitwise or
+  std::cout << "(a | b) = " << static_cast<int>(a | b) << std::endl;
+  std::cout << "(a | c) = " << static_cast<int>(a | c) << std::endl;
 
 .. _lec3_common_math:
 
@@ -285,6 +383,12 @@ nest position, i.e. :code:`arr[1]`. Line 5 first advances ``ptr`` to
 :code:`arr[2]` and displays its value.
 
 For more, take a look at this :nblec_3:`ptr_arith`.
+
+Example pointer_arithmetic.cpp
+++++++++++++++++++++++++++++++++++++++
+
+Example pointer_arithmetic_double.cpp
+++++++++++++++++++++++++++++++++++++++
 
 .. _lec3_stm:
 
