@@ -28,10 +28,10 @@ such as *addition*, *subtraction*, *multiplication*, *division*, and *modulus*.
 1. :code:`x+y`: the addition operator
 2. :code:`+x` : unary plus
 3. :code:`x-y`: the subtraction operator
-2. :code:`+x` : unary minus
-4. :code:`x*y`: the multiplication operator
-5. :code:`x/y`: the division operator
-6. :code:`%`: remainder (modulus) for integers  
+4. :code:`+x` : unary minus
+5. :code:`x*y`: the multiplication operator
+6. :code:`x/y`: the division operator
+7. :code:`%`: remainder (modulus) for integers  
 
 .. note::
 
