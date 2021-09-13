@@ -274,6 +274,9 @@ References vs. Pointers
 There are some similarities between :ref:`references <lec2_ref>` and pointers.
 An obvious one is that you can use both to access and modify an object.
 
+Example ref_pointer.cpp
+++++++++++++++++++++++++++++++++
+
 .. code-block:: cpp
 
     double tol = 1e-6;
@@ -293,6 +296,9 @@ to, since a reference is just an alias of an object.)
 
 A pointer, on the other hand, is an object in `C++`_ thus having its own memory
 address. You can also refer to pointers through the reference semantic.
+
+Example ref_pointer.cpp
+++++++++++++++++++++++++++++++++
 
 .. code-block:: cpp
 
@@ -505,21 +511,6 @@ the syntax is :code:`delete [ptr];`.
     p = new double;     // reallocate here, previous allocation leaked!
     delete p;   // the first double is leaked.
     // delete p; // delete twice won't work and dangerous!
-Example deallocation.cpp
-++++++++++++++++++++++++++++++++
-
-.. code-block:: cpp
-
-    int *ptr_main = nullptr;
-
-    {
-    int *ptr = new int; // points to int allocated on the heap
-    ptr_main = ptr;
-    } // *ptr out of scope and destroyed
-    // create new pointer and intialize to value 3
-    std::cout << *ptr_main << std::endl;
-    delete ptr_main;
-    }
 
 Dynamic Array Allocation/Deallocation
 -------------------------------------
@@ -559,7 +550,125 @@ A common mistake is mixing :code:`new/new[]` with :code:`delete/delete[]`.
     double *p2 = new double [2];
     delete p2; // WRONG!
 
-Try the :nblec_2:`dyn`.
+Stack Allocation/Deallocation
++++++++++++++++++++++++++++++++++++++++++
+
+When we normally initialize variable they are automatically
+initialied on the stack. 
+
+.. image:: images/stack_allocation_1.png
+
+We enter the scope of the brace and initialize :code:`int a=2`.
+These gives the variable **a** a memory address and writes the value 
+of 2 at that location
+
+.. image:: images/stack_allocation_2.png
+
+When we initialize another variable, it is placed at the next location
+in the stack.
+.. image:: images/stack_allocation_3.png
+
+As we leave the scope of the :code:`{}` both variables automatically
+get deleted and the memory on the stack is freed.
+
+.. image:: images/stack_allocation_4.png
+
+
+Heap Allocation/Deallocation
++++++++++++++++++++++++++++++++++++++++++
+
+To create dynamic memory on the heap we first initialize a pointer.
+We give it the value of :code:`nullptr` to signify that we are not
+pointing to anything yet.
+
+.. image:: images/heap_allocation_1.png
+
+We the allocate memory on the heap using the :code:`new` operator.
+In this case we are allocation space for 4 intgers.  The value
+of :code:`ptr` becomes the memory address on the heap. 
+
+.. image:: images/heap_allocation_2.png
+
+When we leave the scope of the :code:`{}` the stack variables defined
+within the scope get deleted.  Therefore here we delete the pointer :code:`ptr`.  When we delete the pointer we no longer have access
+to the memory we allocated on the heap using the :code:`new` operator.
+This is a memory leak.
+
+.. image:: images/heap_allocation_3.png
+
+In order to ensure against memory leaks we need to make
+sure we either use the :code:`delete[]` operator to free the memory
+we created before the pointer gets destroyed or pass on the address to
+that heap memory to a pointer outside of that scope.
+
+.. image:: images/heap_allocation_4.png
+
+Here we create a pointer outside of the inner scopes. 
+
+.. image:: images/stack_heap_1.png
+
+Again we can allocate memory on the heap as usual.
+
+.. image:: images/stack_heap_2.png
+
+In this case we can copy the value of the inner pointer
+to our pointer in the main scope.   
+
+.. image:: images/stack_heap_3.png
+
+When we leave the inner scope the ptr that
+created the memory on the heap gets deleted
+but since the outer pointer still holds the 
+address of the array on the heap there is no 
+memory leak.
+
+.. image:: images/stack_heap_4.png
+
+Still we need to make sure we delete the memory at some point.
+Here we use the :code:`ptr_main` to delete the memory.
+
+.. image:: images/stack_heap_5.png
+
+Example deallocation.cpp
+++++++++++++++++++++++++++++++++
+
+.. code-block:: cpp
+
+    int *ptr_main = nullptr;
+
+    {
+    int *ptr = new int; // points to int allocated on the heap
+    ptr_main = ptr;
+    } // *ptr out of scope and destroyed
+    // create new pointer and intialize to value 3
+    std::cout << *ptr_main << std::endl;
+    delete ptr_main;
+    }
+
+You need to be very mindful when working with 
+pointers.  It's very common to make mistakes
+when trying to return pointers from functions.
+
+Example deallocation_2.cpp
+++++++++++++++++++++++++++++++++
+
+What is wrong with this function?
+
+.. code-block:: cpp
+
+  int *allocate_int() {
+  int a = 3;
+  return &a;
+  }
+
+How would you fix this code?
+
+
+Try yourself
+++++++++++++++++++++++++++++++++
+
+Write a function that returns a pointer to an array of doubles
+and call it in main.
 
 .. note::
 
