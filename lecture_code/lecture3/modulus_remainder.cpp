@@ -20,6 +20,7 @@ int main() {
 
   int a = 5;
   std::cout << "mod(5,2) =" << 5 % 2 << std::endl;
+  std::cout << "mod(5,2) =" << 5.2 % 2 << std::endl;
 
   my_float f1{5};
   my_float f2{2.5};

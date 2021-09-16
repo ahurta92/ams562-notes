@@ -11,7 +11,7 @@ int main() {
   c = --a;
 
   // What will each operator print out?
-  std::cout << "a = " << a << std::endl;
-  std::cout << "b = " << b << std::endl;
-  std::cout << "c = " << c << std::endl;
+  std::cout << "a = " << a << std::endl; //
+  std::cout << "b = " << b << std::endl; //
+  std::cout << "c = " << c << std::endl; //
 }

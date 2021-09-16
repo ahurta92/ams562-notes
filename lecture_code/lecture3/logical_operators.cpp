@@ -4,9 +4,9 @@
 int main() {
 
   int a = -0b1011;
+  unsigned b = a;
   int c = 0b1000;
 
-  unsigned b = a;
   std::cout << "a  = " << a << std::endl;
   std::cout << "b  = " << b << std::endl;
   std::cout << "c  = " << c << std::endl;

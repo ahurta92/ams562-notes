@@ -1,14 +1,15 @@
-// This is the famous hello world program
-//#include <iostream>
+/* This is the famous hello world program
+
+This is a block comment
+*/
+#include <iostream> // define input/output standard functions
 
 int main() {
-  // we print hello world using the
-  // cout (character output stream)
-  // defined in iostream
-  // note "Hello World!\n" is a string literal
-  // \n is a newline character
-  // \ is used to specify special characters
-  std::cout << "Hello World!\n";
-  // what happens when we forget to return 0?
+  // std::cout
+  std::cout << "Hello World !\n "; // c++ statement
+  std::cout << 2;                  // c++ statement
+
+  std::cout << 2.0f; // c++ statement
+
   return 0;
 }
