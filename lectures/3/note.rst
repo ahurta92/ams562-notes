@@ -597,11 +597,28 @@ The program's ``argc`` is 5 with :code:`argv={"./a.out","1","2","3","abc"}`.
 The functionality of command line inputs is important, because it enables
 *batch processing* with user inputs.
 
+Example argc_argv.cpp
++++++++++++++++++++++++++++++++++
+
+.. code-block:: cpp
+
+    int main(int argc, char **argv) {
+
+    std::cout << "Number of arguments " << std::endl;
+
+    for (int i = 0; i < argc; ++i) {
+    std::cout << "argv["<< "]=" << argv[i] << std::endl;
+        }
+
+    }
+
+
 .. note::
 
     In most cases, interactive inputs, e.g. through :code:`std::cin`
     and keyboards, are not possible, especially for scientific computing where
     programs usually run on clusters.
+
 
 Now, combining this information with ``if`` statement, you can parse the user
 command line inputs. In addition, it's common that you want the user to pass
@@ -745,11 +762,21 @@ the default behavior. The ``is_vowel`` example can also be written as:
         // do something
     }
 
-Play around with this :nblec_3:`switch`.
+Play around with this :nblec_3:`switch` .
+
+Look at the following examples to understand the need for :code:`break` in 
+switch statements. 
+
+Example switch_case.cpp
++++++++++++++++++++++++++++++
+
+Example switch_case_withbreaks.cpp
++++++++++++++++++++++++++++++++++++++
+
 
 .. _lec3_stm_loop:
 
-Loop Statements
+Loops
 ---------------
 
 Loop statements allow you to repeatedly execute some statements that follow
@@ -762,7 +789,9 @@ The :code:`for` loop in `C++`_ has the syntactic form:
 
 .. code-block:: cpp
 
-    for (<init statement>; <condition statement>; <express>) {
+    for (<initialization statement>; 
+           <continuation criteria>;
+         <step_operation>) {
         // do work
     }
 
@@ -771,7 +800,9 @@ will be invoked once. Here is what happens under the hood:
 
 .. code-block:: cpp
 
-    for (<init statement>; <condition statement>; <express>) {
+    for (<init statement>; 
+        <condition statement>;
+         <step_operation>) {
         // if <init statement> has not been invoked, do it
         // if <condition statement> fails, stop
 
@@ -807,6 +838,44 @@ Or accumulate the value:
 .. note::
 
     The counter ``i`` in the examples above has **local scope**.
+
+Example fill_sum_array.cpp
++++++++++++++++++++++++++++++++++++
+
+This example will read in arguments at the commandline
+and dynamically fill and array and then sum.  
+
+
+.. code-block:: cpp
+    :linenos:
+
+    int main(int argc, char **argv) {
+
+  std::cout << "Number of arguments " << argc << std::endl;
+
+  double *data = new double[argc - 1]; // pointer to double array
+                                       // heap allocation
+
+  // fill with  with argv
+  for (int i = 0; i < argc; ++i) {
+    data[i] = atof(argv[i]);
+  }
+
+  for (int i = 1; i < argc; ++i) {
+    std::cout << data[i] << std::endl;
+  }
+  double sum = 0;
+  for (int i = 1; i < argc; ++i) {
+    sum += data[i];
+  }
+  std::cout << "sum of data   " << sum << std::endl;
+
+  delete[] data;
+}
+
+
+
+
 
 You can, of course, define the counter out of the :code:`for` loop:
 
@@ -878,13 +947,19 @@ Implement a Forward Linked List with :code:`struct`
 +++++++++++++++++++++++++++++++++++++++++++++++++++
 
 In `C++`_, it's common that you want to group some data into a structure, in
-this case, you can use :code:`struct`. The syntactic form is:
+this case, you can use :code:`struct`.Structs are user defined types which are used
+to store groups of items together 
+The syntactic form is:
 
 .. code-block:: cpp
 
     struct StructName {
         // any attributes
     }; // <-- don't forget the semicolon
+
+
+Example struct.cpp
+++++++++++++++++++++++++++++++++++++
 
 For instance:
 
@@ -1058,7 +1133,7 @@ Pick the logic bugs in the following code:
 Jump Statements
 ---------------
 
-The laster family of control statement is the *jump* statement. This is mainly
+The last family of control statement is the *jump* statement. This is mainly
 used to :code:`continue` a loop statement and/or :code:`break` it given the
 fact that its conditional expression cannot be easily determined beforehand.
 
@@ -1117,3 +1192,52 @@ A practical example would be interactively talk with the user through
 .. only:: latex
 
     Play around with :cpplec_3:`ita_cin`.
+
+
+Exercise Taylor Approxmiations with for and while
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+We would like to compute the Taylor series of the exponential function:
+
+.. math::
+    
+    e^x=\sum^\infty_{i=0}\frac{x^n}{n!}
+
+
+
+Part 1
+------------------
+
+
+Write a program that uses a for loop to compute the Taylor series 
+of :code:`e^x` for a given value of x.  The program should 
+take 2 inputs.  The first input is the value of x that 
+you want to compute.  The second input is the number of 
+terms you want to use in the approximation.  Compare 
+your final approximation with the value computed by
+:code:`std::exp()`.  You should write some logic that 
+checks if the user inputs are valid.  
+
+Test your code at different locations and for different 
+number of iterations.  
+
+
+
+Part 2
+------------------
+
+Write a program that uses a while loop to compute the Taylor series 
+approximation.  The program should take 2 inputs.  The first
+is the value of x and the second is the value of :code:`eps`. 
+The error you want to compute to.  You should write some logic that 
+checks if the user inputs are valid. 
+
+Test your code at different locations and for different values
+of epsilon.  
+
+.. note::
+
+    You can find the executable files for each program.
+    Your program should mimic the behavior of these
+    programs.  
+
