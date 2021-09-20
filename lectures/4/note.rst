@@ -29,6 +29,9 @@ function. This is fine for small projects, say homework assignments. However,
 for larger projects, this can be very limited. Consider the following
 situation.
 
+Example switch_no_function.cpp
+++++++++++++++++++++++++++++++++++
+
 .. code-block:: cpp
 
     int flag;
@@ -98,6 +101,9 @@ simply **call** the function ``chooseMethods``:
 In this way, everytimes when you need to add a new method, there is only
 once place you need to worry about, i.e. the function ``chooseMethods``.
 
+Example switch_function.cpp
+++++++++++++++++++++++++++++++++++
+
 Now, let's take a closer look at the function above, in which ``chooseMethods``
 is its *name*, :code:`std::string` is the *return type*, and :code:`int flag`
 is the *parameter list*.
@@ -109,6 +115,10 @@ Essentially, every function has:
 1. a name,
 2. a return type, and
 3. a parameter list.
+
+
+Example function_intro.cpp
+++++++++++++++++++++++++++++++++++
 
 .. _lec4_func_empty_return:
 
@@ -167,6 +177,9 @@ requires returning empty stage.
 
 The Return Type
 +++++++++++++++
+
+Example return_type.cpp
+++++++++++++++++++++++++++++++++++
 
 The return type of a function must be listed explicitly and uniquely, i.e.
 you cannot have a function that has multiple return types.
@@ -248,6 +261,9 @@ for a parameter list, multiple arguments are, of course, supported.
 Return Pointers & References
 ++++++++++++++++++++++++++++
 
+Example return_pointer_ref.cpp
+++++++++++++++++++++++++++++++++++
+
 There is nothing to stop you from returning :ref:`pointers <lec2_ptr>` and
 :ref:`references <lec2_ref>`. However, whenever you directly access the memory,
 special care must be taken.
@@ -320,6 +336,10 @@ Now, a more structured implementation of our
 Passing Arguments
 -----------------
 
+
+Example swap_no_function.cpp
+++++++++++++++++++++++++++++++++++
+
 A very good example to understand argument passing in `C++`_ is the following
 ``swap`` function. A swapping operation is to exchange the contents between
 two objects. Let's take a look at the following pseudo code of swapping:
@@ -336,6 +356,9 @@ two objects. Let's take a look at the following pseudo code of swapping:
 
 Following the pseudo code and with the knowledge in high level programming
 languages, you probably simply come with a `C++`_ implementation:
+
+Example swap_by_copy.cpp
+++++++++++++++++++++++++++++++++++
 
 .. code-block:: cpp
 
@@ -370,6 +393,9 @@ performed on ``a`` and ``b`` have no effects to ``lhs`` and ``rhs``.
 Since we have just mentioned memory addresses, you probably can simply come
 up a proper implementation like:
 
+Example swap_by_ptr.cpp
+++++++++++++++++++++++++++++++++++
+
 .. code-block:: cpp
 
     void Swap2(int *a, int *b) {
@@ -402,6 +428,9 @@ Download and play around with :nblec_4:`swap`.
 `C++`_ allows you pass parameters as their references. This is a convenient
 feature that allows one to write efficient code.
 
+Example swap_by_ref.cpp
+++++++++++++++++++++++++++++++++++
+
 .. code-block:: cpp
 
     void Swap3(int &a, int &b) {
@@ -418,6 +447,10 @@ the original variables.
 .. tip::
 
     Use :code:`const` reference with :code:`std::string` whenever possible.
+
+
+Example pass_by_const.cpp
+++++++++++++++++++++++++++++++++++
 
 In general, the creation of an :code:`std::string` requires a dynamic memory
 allocation (because the size of the string is unknown) and a memory copying.
@@ -452,6 +485,8 @@ dynamic memory allocation and data copying.
     rule applies for using references with functions, i.e. use :code:`const`
     whenever possible.
 
+
+
 PBV vs. PBR
 ++++++++++++
 
@@ -473,13 +508,16 @@ passed for the latter. For this case, it's hard so say which one is preferred.
 
 .. _lec4_func_pro_impl:
 
+Example swap_array.cpp
+++++++++++++++++++++++++++++++++++
+
 Function Prototypes & Implementations
 --------------------------------------
 
 Declarations & Definitions of Variables
 +++++++++++++++++++++++++++++++++++++++
 
-In :ref:`defining and initialing variables <lec1_define_init>`, we have learned
+In :ref:`defining and initizaling variables <lec1_define_init>`, we have learned
 how to define a variable, say :code:`int a;`. With this simple piece of code,
 two steps actually happen: 1) *declaring* ``a`` as an ``int``, and 2)
 *defining* it in the stack memory.
@@ -538,6 +576,8 @@ Constant variables can also be declared first.
 
     const int b = 2; // define it, must be initialized
 
+Example extern_keyword.cpp
+++++++++++++++++++++++++++++++++++
 
 "Declarations" of Functions
 +++++++++++++++++++++++++++
