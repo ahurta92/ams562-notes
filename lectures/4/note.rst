@@ -845,7 +845,38 @@ regards of the function parameter, they are same. Therefore, the ``f`` above
 is not considered as function overloading, and if you try to define them
 separately, you will have multiple definitions error.
 
-Function Matching (optional section)
-------------------------------------
 
-.. todo:: Need to convert this part from my old lecture slides.
+Exercise replicating matlab arrays 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Your task is to implement a set of functions which generate 
+the following set of standard arrays.  
+
+* :code:`allocate_array(N)` returns pointer to array N dimensional arrayn
+* :code:`fill_array(N,val,array)` fills array of size N with value val
+* :code:`ones(N)` returns array of ones with size N
+* :code:`zeros(N)` returns array of zeros with size N
+* :code:`print_array(array,N)` prints an array of N 
+* :code:`linspace(pt1,pt2,N)`  returns an array of N evenly spaced values between pt1 and pt2 
+
+.. note:: 
+    * First implement functions using doubles.
+    * Set default values for the size parameter.
+    * Using function overloading to create a set of functions using ints
+    * For each function think about the input and output types.
+    * Write a main that tests your implementations
+
+Challenge Task:
+
+Write a function that takes in a function pointer to a standard math fuction defined in
+in :code:`<cmath>` and an array.  
+The function should evaluate the function at each value of the array.  
+See :code:`function_pointer.cpp` example to see a use of function_pointers.   
+
+Evaluate :code:`std::cos` and :code:`std::sin` between 0 and :math:`2*pi`
+  
+
+
+
+    
+
