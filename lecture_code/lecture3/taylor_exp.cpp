@@ -2,12 +2,17 @@
 #include <cmath>
 #include <iostream>
 
+// Code computes the taylor series of exp(x)
+// Takes two inputs
+//
+// x: point
+// N: terms in series
 int main(int argc, char **argv) {
 
-  if (argc == 3) {
+  if (argc == 3) { //
 
-    int N = atoi(argv[2]);
-    double x{atof(argv[1])};
+    double x{atof(argv[1])}; // a.out .2 3
+    int N{atoi(argv[2])};
     assert(N > 1);
 
     // fill with  with argv
@@ -20,7 +25,7 @@ int main(int argc, char **argv) {
       exp_x += xn / fac;
       std::cout << "i: " << i << " e^x is " << exp_x << std::endl;
     }
-    std::cout << "abs(exp_x - exp(x)) = " << std::abs(exp(x) - exp_x)
+    std::cout << "abs(exp_x - exp(x)) = " << std::abs(std::exp(x) - exp_x)
               << " with N = " << N << std::endl;
   } else {
 
