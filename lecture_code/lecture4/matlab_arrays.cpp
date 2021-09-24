@@ -12,7 +12,7 @@ void fill_array(int n, double val, double *my_array) {
   }
 }
 // print_array
-void print_array(int n, double *const my_array) {
+void print_array(int n, double const *my_array) {
 
   for (int i = 0; i != n; ++i) {
     std::cout << my_array[i] << " ";
@@ -21,6 +21,7 @@ void print_array(int n, double *const my_array) {
 }
 
 double *zeros(int n) {
+  // double *ptr = new double[n];
   double *a = allocate_doubles(n);
   fill_array(n, 0, a);
   return a;

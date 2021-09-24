@@ -156,6 +156,7 @@ When we come across a negative value, we can return :code:`-1` indicating
 the error. 
 
 .. code-block:: cpp
+
    int area(int length, int width){
       if(length <= 0 || width <= 0) return -1;
       return length*width;
@@ -178,6 +179,7 @@ is a integer used for indicating errors.  You can read more about it
 `here <https://en.cppreference.com/w/cpp/error/errno>`_
 
 .. code-block:: cpp
+
    int area(int length, int width){
       if(length <= 0 || width <= 0) errno=7;
       return length*width;
