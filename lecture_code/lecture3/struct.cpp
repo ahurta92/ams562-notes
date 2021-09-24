@@ -12,9 +12,23 @@ struct ComplexNumber {
   double imag;
 };
 
+ComplexNumber &addreal(const ComplexNumber &c) {
+
+  ComplexNumber a = c; // copy values
+
+  a.real += 1;
+
+  return a;
+}
+
 int main() {
 
   ComplexNumber a, b;
+
+  int ac = int(4);
+
+  b = addreal(a);
+  std::cout << b.real << std::endl;
 
   // ComplexNumber c{1, 2};
 

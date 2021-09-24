@@ -1,6 +1,9 @@
 
 #include <iostream>
 
+// passing by value
+//
+// we create copies of both a and b
 void swap1(int a, int b) {
   // swap
   int temp = b;

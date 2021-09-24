@@ -1,10 +1,13 @@
 #include <iostream>
 
-void print_hello_world() { std::cout << "Hello World \n"; }
+void print_hello_world() {
+  std::cout << "Hello World \n";
+  return;
+}
 
 void doWork(double *data) {
 
-  // protecth against nullptr
+  // protects against nullptr
   if (data) {
     *data = 1.0;
   }

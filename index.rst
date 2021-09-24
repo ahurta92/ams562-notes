@@ -115,10 +115,24 @@ Lecture 10: Storing ``matrix`` in Scientific Computing
 
 .. toctree::
    :maxdepth: 2
-   :caption: Lecture 11
+   :caption: Lecture 10
    :name: master_lec10
 
    lectures/10/note
+
+New Lectures
+============
+
+.. toctree::
+   :maxdepth: 2
+   :caption: New Lectures
+   :name: master_new_lectures
+
+
+   lectures/new_lectures/error
+
+.. only:: html
+
 
 Case Studies
 ============
@@ -127,6 +141,7 @@ Case Studies
    :maxdepth: 2
    :caption: Case Studies
    :name: master_cases
+
 
    cases/doxygen
    cases/inter_python

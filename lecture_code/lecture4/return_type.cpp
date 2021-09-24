@@ -30,7 +30,7 @@ void print_array(const int len, double *array) {
 
 int main() {
 
-  ComplexNumber a = getDefaultComplexNumber();
+  ComplexNumber a = getDefaultComplexNumber(); //
 
   int sz = 5;
   double *array = new double[sz];

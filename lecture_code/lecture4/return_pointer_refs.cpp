@@ -8,6 +8,7 @@ int *getPointer() {
 
   return ptr;
 }
+
 int *getPointer1() {
 
   int *ptr = new int{0};

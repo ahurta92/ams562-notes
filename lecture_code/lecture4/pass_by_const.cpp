@@ -9,7 +9,7 @@
 // g++ -O0 pass_by_const.cpp
 
 void print1(std::string msg) { std::cout << msg << std::endl; }
-void print2(const std::string msg) { std::cout << msg << std::endl; }
+void print2(const std::string &msg) { std::cout << msg << std::endl; }
 
 int main() {
 

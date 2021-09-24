@@ -1,6 +1,8 @@
 
 #include <iostream>
-
+// swap by pointer
+//
+//
 void swap_ptr(int *a, int *b) {
   // swap
   int temp = *b;
