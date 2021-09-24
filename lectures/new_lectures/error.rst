@@ -311,12 +311,13 @@ exception we can fix the error by using a while-block.
    }
 
 
+For more information on how and why to use exceptions you can look `here <https://isocpp.org/wiki/faq/exceptions>`_
+
 
 Exercise Error Handling matlab arrays 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-Your task is to implement a set of functions which generate 
-the following set of standard arrays.  
+In the last class we had the task of implementing the following functions.
 
 * :code:`allocate_array(N)` returns pointer to array N dimensional arrayn
 * :code:`fill_array(N,val,array)` fills array of size N with value val
@@ -325,18 +326,17 @@ the following set of standard arrays.
 * :code:`print_array(array,N)` prints an array of N 
 * :code:`linspace(pt1,pt2,N)`  returns an array of N evenly spaced values between pt1 and pt2 
 
-.. note:: 
-    * First implement functions using doubles.
-    * Set default values for the size parameter.
-    * Using function overloading to create a set of functions using ints
-    * For each function think about the input and output types.
-    * Write a main that tests your implementations
+Today, we will use use exceptions to improve the usage of our functions.
 
-Challenge Task:
+The first task is create four functions 
 
-Write a function that takes in a function pointer to a standard math fuction defined in
-in :code:`<cmath>` and an array.  
-The function should evaluate the function at each value of the array.  
-See :code:`function_pointer.cpp` example to see a use of function_pointers.   
+* :code:`array_add` 
+* :code:`array_sub`   
+* :code:`array_multiply`   
+* :code:`array_divide`   
 
-Evaluate :code:`std::cos` and :code:`std::sin` between 0 and :math:`2*pi`
+These functions should return a new array.  Then write exceptions
+and catch the exceptions that test for possible errors.  
+To get ideas you can refer to `cppreference <https://en.cppreference.com/w/cpp/error/exception>`_
+
+You can start using the starter code matlab_array.cpp in the lecture_error directory.  
