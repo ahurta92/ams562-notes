@@ -178,7 +178,9 @@ Another way we can report an error is by using the global
 is a integer used for indicating errors.  You can read more about it
 `here <https://en.cppreference.com/w/cpp/error/errno>`_
 
+
 .. code-block:: cpp
+
 
    int area(int length, int width){
       if(length <= 0 || width <= 0) errno=7;

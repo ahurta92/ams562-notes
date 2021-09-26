@@ -1,6 +1,7 @@
 
 #include <exception>
 #include <iostream>
+
 // Task is to create exception that will
 // catch errors when using these functions.
 //
@@ -15,8 +16,10 @@
 //
 //
 //
+//
 
 class Size_error {};
+class NullPtr_except {};
 // returns pointer to heap allocated array
 double *allocate_doubles(int n) {
   if (n <= 0) {
@@ -27,8 +30,12 @@ double *allocate_doubles(int n) {
 // fill array with value
 void fill_array(int n, double val, double *my_array) {
 
-  for (int i = 0; i != n; ++i) {
-    my_array[i] = val;
+  if (my_array) {
+    for (int i = 0; i != n; ++i) {
+      my_array[i] = val;
+    }
+  } else {
+    throw NullPtr_except{};
   }
 }
 // print_array
@@ -66,10 +73,14 @@ void swap_array(double *&a, double *&b) {
   b = a;
   a = tmp;
 }
-
+// implement tests
 void array_tests() {
 
   int size{0};
+  double *ptr1 = nullptr;
+
+  fill_array(3, 0, ptr1);
+  double *ptr = zeros(-4);
 
   std::cout << "Enter a size for your array" << std::endl;
 }
@@ -82,9 +93,13 @@ int main() {
     try {
       array_tests();
       keep_trying = false;
-
     } catch (Size_error &e1) {
       std::cerr << "bad size allocation" << std::endl;
+      std::exit(EXIT_FAILURE);
+    } catch (NullPtr_except &e1) {
+      std::cerr << "access null ptr" << std::endl;
+      std::exit(EXIT_FAILURE);
+    } catch (...) {
     }
   while (keep_trying);
 }

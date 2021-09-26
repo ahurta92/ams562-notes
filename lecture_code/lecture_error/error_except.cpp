@@ -18,6 +18,7 @@ int main() {
     int z = area(x, y);
   } catch (Bad_area) {
     cerr << "opps! Bad area calcluation - fix programming" << endl;
-    // exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE);
   }
+  std::cout << " not terminated" << std::endl;
 }
