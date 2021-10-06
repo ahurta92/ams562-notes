@@ -11,6 +11,15 @@
 
 .. _lec6_class_intro:
 
+Introducing User-defined types 
+==========================================================
+
+C++ allows for abstraction mechanisms that let programmers design and implements their own types.
+The types built out of other types using C++ abstraction mechanisms are called user-defined types.
+They are referred to as classes.  User-defined types are preferred over built-in types because 
+they are easier to use, less error-prone. 
+ 
+
 Introducing *Object-Oriented Programming* (OOP), ``class``
 ==========================================================
 
@@ -18,21 +27,22 @@ Introducing *Object-Oriented Programming* (OOP), ``class``
    :local:
    :backlinks: top
 
-One of the main different between C and `C++`_ is that the latter is an
-*object-oriented programming* (OOP) language, which means models are organized
-around *objects* instead of *actions*. Traditionally, programs are done in a
-way such that data and actions are separated and allocating data is easy but
-defining the complex actions on top of it is hard.
+One of the main differences between C and C++ is that the latter is an object-oriented programming
+(OOP) language, which means models are organized around objects instead of actions.
+Traditionally, programs are written so that data and the operations done on data are separate.
+In these types of programs allocating data can be easy, but defining the complex actions on top of it is hard.
 
-The fact is that objects are what we care about, instead of arbitrarily data.
-For instance, each of the student has a unique school ID, which can be
-represented as an integer or a string. However, such a raw data type has no
-meaning on its own thus useless; the "ID" data only becomes meaningful when
-it couples with the corresponding student, which can be viewed as an
-``object``.
+Creating user-defined types allows us to link the data with how the data can be used.
+For example, by defining types, we can distinguish between the interface
+(aka how all users are allowed to use a class) and its implementation.
+This makes writing programs more intuitive and reading our programs easier. 
 
-In OOP, an ``object`` is a user-defined model that can contain both data (
-a.k.a. fields/attributes/members) and code (a.k.a. methods/member functions).
+The fact is that when solving problems, we care about objects, not arbitrary data.
+For instance, each student has a unique school ID, which can be represented as an integer or a string.
+However, such a raw data type has no meaning and is thus useless; the “ID” data only becomes meaningful
+when it couples with the corresponding student, which can be viewed as an object.
+In OOP, an ``object`` is a user-defined model that can contain both data ( a.k.a. fields/attributes/members)
+and code (a.k.a. methods/member functions).
 
 .. note::
 
@@ -42,8 +52,8 @@ a.k.a. fields/attributes/members) and code (a.k.a. methods/member functions).
 The data and code usually are only applicable to the object itself and this
 makes the programming cleaner and nicer.
 
-The Basis
----------
+The Basics
+-----------
 
 Personally, the first step of doing OOP in `C++`_ is to think through your
 problems and structure the design of objects. (This is the most challenging
@@ -165,7 +175,7 @@ define some consistent naming schemes of the variables.
 Constructors & Destructors
 ++++++++++++++++++++++++++
 
-When we create an object, the object's *constructors* will be called. And when
+When we create an object, the object's *constructor* will be called. And when
 the object reaches its end of life, `C++`_ provides a mechanism called
 *destructor* that will be invoked. `C++`_ generates a *default constructor*,
 a *copy constructor* and a *destructor* for every class been defined.
