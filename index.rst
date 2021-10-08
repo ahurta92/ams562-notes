@@ -120,7 +120,7 @@ Lecture 10: Storing ``matrix`` in Scientific Computing
 
    lectures/10/note
 
-New Lectures
+Errors
 ============
 
 .. toctree::
@@ -133,22 +133,16 @@ New Lectures
 
 .. only:: html
 
-
-Case Studies
-============
+Classes Review
+================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Case Studies
-   :name: master_cases
+   :caption: Classes Review 
+   :name: master_class_review
 
 
-   cases/doxygen
-   cases/inter_python
-   cases/parallel
-   cases/temp_meta
-
+   lectures/6/review
 
 .. only:: html
 
-  .. include:: indices_tables.txt

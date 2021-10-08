@@ -1,7 +1,7 @@
 .. include:: ../../links.txt
 .. include:: ../../roles.txt
 
-.. _lec6:
+.. _lec6_1:
 
 .. contents:: Table of Contents
    :local:
@@ -9,10 +9,15 @@
    :backlinks: top
 
 
-.. _lec6_class_intro:
+.. _lec6_class_review:
 
-Introducing User-defined types
+Classes
 ==========================================================
+
+- Classes represent concepts in a program
+  - If you can think of "it" as a separate entity, its plausible that it can be made into a class
+  - Vector, Matrix, input stream, string, FFT, graph, box, clock
+- A class is a (user-defined) `type`
 
 C++ allows for abstraction mechanisms that let programmers design and implements their own types.
 The types built out of other types using C++ abstraction mechanisms are called user-defined types.
