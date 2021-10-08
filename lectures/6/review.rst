@@ -579,4 +579,86 @@ Const member Fuctions
 
 .. literalinclude:: /lecture_code/lecture6_1/date_class7.cpp
     :language: cpp
+
+- Calling a non const function for a const member is an error
+- Trying to change an object from a const member functino is also an error. 
+
+
+Member functions vs "Helper functions"
+#############################################
+
+By designing our classes to be minimal yet complete we are required to leave
+out many operations that are merely useful.  
+
+- Functions that are helpful and can be implemented as freestanding function should be implemented outside of the class
+- Prevents bugs in the function from corrupting the class itself.
+- Not accessing the representation directly is important
+
+    - When debugging a class you first look at the members that directly access the representation
+    - It would be better if there is a minimal amount versus say 50
+
+- When a representation changes, only the member functions need to change.  For example
+
+.. code-block:: cpp 
+
+    // helper functions
+    // access d using d.day(), d.month() and d.year()
+    // make new Date to return
+    Date next_Sunday(const Date& d){/*...*/}
+    Date new_weekday(const Date& d){ /*.....*/}
+    bool leapyear(int y){/*....*/}
+    bool is_date(int y, Month m, int d);
+    bool operator ==(const Date& a, const Date &b)
+    { return a.year()==b.yearkk()&&a.month()==b.month()&&a.day()==b.day();}
+    bool operator !=(const Date& a, const Date & b){
+    return !(a==b);
+    }
+
+- When the class representation itself changed none of these helper function need to be changed.
+- Helper functions are convenience functions, auxilary functions.
+- Helper functions are a design concept
+- Helper funcitons often take arguments of the classes that they are helpers of.  
+
+We can use namespaces to identify a group of helper functions.  
     
+
+
+Date Class
+************************
+
+Here is what an example :code:`Date` class might look like.  
+Some of the function bodies are just comments.  You can go ahead
+and try to implement the functions yourself.  
+
+The declarations are in a file called Chrono.h
+
+.. literalinclude:: /lecture_code/lecture6_1/Chrono.h
+    :language: cpp
+
+The definitions are in a file called Chrono.cpp
+
+.. literalinclude:: /lecture_code/lecture6_1/Chrono.cpp
+    :language: cpp
+
+Exercises
+************************
+
+Excercise 1
+#############################################
+
+In HW2 we asked you to generate random points on a unit sphere and compare the **great circle** length
+between the points. Here I would like you implement the same solution with help classes and helper functions.
+
+1. Implement a class SpherePoint
+
+    1. The representation should be 3 doubles representing the x,y, and z coordinates.
+    2. Implement a constructor that takes in two doubles theta, and phi for the angles of the sphere.
+    3. Implement a default constructor that generates a random point on a sphere.
+    4. Create a heler function that takes in two :code:`SpherePoint` and returns the great circle distance.
+
+2. Generate an array of N random Sphere Points and find the max and min lengths.  
+
+Excercise 2
+#############################################
+
+1. Implement the leapyear() function in Chrono.cpp
