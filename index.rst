@@ -133,16 +133,27 @@ Errors
 
 .. only:: html
 
-Classes Review
+Classes 1
 ================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Classes Review 
-   :name: master_class_review
+   :caption: Classes 1 
+   :name: master_class_1
 
 
-   lectures/6/review
+   lectures/6/classes1
+
+Classes 2
+================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Classes 2 
+   :name: master_class_2
+
+
+   lectures/6/classes2
 
 .. only:: html
 

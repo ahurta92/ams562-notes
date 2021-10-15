@@ -18,11 +18,13 @@ private:
 };
 
 int main() {
+
   Date d;
   const Date cd = d;
 
   d.day();
   d.add_day(2);
+
   cd.day();
   cd.add_day(2); // error const
 }

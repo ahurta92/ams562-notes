@@ -1,5 +1,6 @@
 #include <iostream>
 namespace Chrono {
+
 enum class Month {
   jan = 1,
   feb,
@@ -14,6 +15,7 @@ enum class Month {
   nov,
   dec
 };
+
 class Date {
 
 public:
@@ -39,6 +41,7 @@ private:
   int d;
 };
 
+// helper functions
 bool is_date(int y, Month m, int d); // true for valid date
 bool leapyear(int y);                // true if y is a leap year
 

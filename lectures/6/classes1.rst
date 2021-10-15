@@ -34,7 +34,7 @@ Why use types?
 - Types are good at directly representing ideas in our code.
 
     - Helps us, the compiler, and those who read our code understand our code better
-    - When we want to do integer arthmetic, :code:`int` is a good type.
+    - When we want to do integer arithmetic, :code:`int` is a good type.
     - When we want to manipulate text, :code:`string` is a good type. 
     
   - If you can think of "it" as a separate entity, its plausible that it can be made into a class
@@ -60,7 +60,7 @@ How to create types?
 Classes and Members
 ************************
 
-- A class is a user-defiend type made up of
+- A class is a user-defined type made up of
 
     -  built-in types 
     -  other user-defined types
@@ -79,7 +79,7 @@ Classes and Members
     };
 
 Here we define a simple type :code:`X` with no members.
-The class defintion needs to declare all of the classes members
+The class definition needs to declare all of the classes members
 inside the scoped braces of the class
 
 .. code-block:: cpp
@@ -170,7 +170,7 @@ a public member function for example:
     X x;
     int y=x.f(2);// access through member function f
     
-The use of private and public is to seperate the interface and implementation of a class.
+The use of private and public is to separate the interface and implementation of a class.
 
 - A :code:`struct` is a class where the members are public by default:
 
@@ -185,7 +185,7 @@ The use of private and public is to seperate the interface and implementation of
         int mf();
         };
 
-- A struct is used for data structures where the members can take any value
+- A :code:`struct` is used for data structures where the members can take any value
 - There is no need to restrict how a user uses the class.
 
 Evolving a Class
@@ -205,7 +205,7 @@ integer variables.
 
 - We are free to use :code:`Date` however we like.
 - We can read and write to the data members to change the values
-- Not very convient
+- Not very connivent
 - Error prone
 
 To improve functionality of our :code:`Date` type we can add some
@@ -226,10 +226,10 @@ For our :code:`Date` type we also provide a method to increase the value of a da
 Member Functions
 ##############################
 
-So far we have added a function to intialize a date and add days to a date.
+So far we have added a function to initialize a date and add days to a date.
 In principle these functions allow us to generate dates with valid values.
 This is helpful as long as we use actually remember to use these functions.
-It is possible that a user does not use these functions or forgets to intialize a :code:`Date`.
+It is possible that a user does not use these functions or forgets to initialize a :code:`Date`.
 For this reason, it is best to provide member functions which help require that your types
 are used correctly.
 
@@ -242,10 +242,10 @@ are used correctly.
 - A member function with the same name as a class is a constructor
 
     - The constructor is used for initialization
-    - It is a compiler error to intialize a class that uses a constructor that requires an argument.
+    - It is a compiler error to initialize a class that uses a constructor that requires an argument.
 - Above you can find all the ways to call the argument constructor
 
-    - You can also use :code:`Data(2021,11,8)` but :code:`Date{2021,11,8}` is prefered because it indicates intialization
+    - You can also use :code:`Data(2021,11,8)` but :code:`Date{2021,11,8}` is preferred because it indicates initialization
 
 .. note:: 
     Notice that by adding a constructor we can no longer create uninitialized 
@@ -313,21 +313,21 @@ of our class in a constructor.  We can write:
         d=dd;
     }
 
-but this will first call the default intializer for each of the
+but this will first call the default initializer for each of the
 members and then assign the values to them.  
 
-We can also define member functions right in the class defintion:
+We can also define member functions right in the class definition:
 
 
 .. literalinclude:: /lecture_code/lecture6_1/date_class2.cpp
     :language: cpp
 
-Writing the definition of the member function within the class defintion 
+Writing the definition of the member function within the class definition 
 has three effects:
 
 1. The function will be inline;
 2. All the uses of the class will have to be recompiled whenever you change the body of an inline function.
-3. The class defintion gets larger
+3. The class definition gets larger
 
 
 Referring to the current object
@@ -364,8 +364,8 @@ Reporting errors
 .. literalinclude:: /lecture_code/lecture6_1/date_class3.cpp
     :language: cpp
 
-- We place the testing of validity in a seprate function :code:`is_valid()`
-- This allows us catch errors in the intialization of our types.
+- We place the testing of validity in a separate function :code:`is_valid()`
+- This allows us catch errors in the initialization of our types.
 
 Enumerations
 ++++++++++++++++++++
@@ -391,7 +391,7 @@ Operator Overloading
 
 - You can define almost all C++ operators for a class or enumerations.
 - This is called operator overloading.  
-- We use operator overloading when we want to provide a convential notation for a type that we design
+- We use operator overloading when we want to provide a conventional notation for a type that we design
 
 .. literalinclude:: /lecture_code/lecture6_1/operator_overload0.cpp
     :language: cpp
@@ -400,7 +400,7 @@ Operator Overloading
 - We can define just about any operator provided by C++ but only use existing operators such as:
 - :code:`+,-,*,/,%,[],(),^,!`
 
-- You can only define operators with the convential number of operands; 
+- You can only define operators with the conventional number of operands; 
   
     - for example you can define a unary :code:`-` but not a unary :code:`<=`, 
     - and a binary :code:`+` but not a binary :code:`!`. 
@@ -419,7 +419,7 @@ An operator overload must have at least one user-defined type as operand:
 
 .. note:: 
 
-    It's a good idea define operators with their convential meaning.  
+    It's a good idea define operators with their conventional meaning.  
 
     - :code:`+` should be addition 
     - :code:`-` should be subtraction 
@@ -447,8 +447,8 @@ Here are some general rules:
 Argument Types
 #########################
 
-It is possible to use types to provkkkkide good argument checking for our types.
-For example in the case of our :code:`Date` class we used three :code:`ints`
+It is possible to use types to provide good argument checking for our types.
+For example in the case of our :code:`Date` class we used three :code:`int`s
 as the arguments.  That can cause problems
 
 .. code-block:: cpp
@@ -474,7 +474,7 @@ use it as one of our data members.
 - Notice we don't use :code:`Month.nov` 
 
     - :code:`Month` is a type.  Not an object
-    - :code:`nov` is an enumeration.  Not a datamember
+    - :code:`nov` is an enumeration.  Not a data member
 
 - When we can, we should try to catch errors at compile time.
 
@@ -495,11 +495,11 @@ Copying
 When we create objects we are forced to think about the objects constructor.
 The constructor is one of the most important members of a class.
 
-- You decide how to intialize an object of your type
-- You also decide what is required to intialize the object
-- How can we insure that we intialize a valid object.
+- You decide how to initialize an object of your type
+- You also decide what is required to initialize the object
+- How can we insure that we initialize a valid object.
 
-After intialization we need to consider if we can copy our objects.  If we can,
+After initialization we need to consider if we can copy our objects.  If we can,
 how do we copy?
 
 For a :code:`Date` or :code:`Month` we can easily copy. 
@@ -581,7 +581,7 @@ Const member Fuctions
     :language: cpp
 
 - Calling a non const function for a const member is an error
-- Trying to change an object from a const member functino is also an error. 
+- Trying to change an object from a const member function is also an error. 
 
 
 Member functions vs "Helper functions"
@@ -609,15 +609,15 @@ out many operations that are merely useful.
     bool leapyear(int y){/*....*/}
     bool is_date(int y, Month m, int d);
     bool operator ==(const Date& a, const Date &b)
-    { return a.year()==b.yearkk()&&a.month()==b.month()&&a.day()==b.day();}
+    { return a.year()==b.year()&&a.month()==b.month()&&a.day()==b.day();}
     bool operator !=(const Date& a, const Date & b){
     return !(a==b);
     }
 
 - When the class representation itself changed none of these helper function need to be changed.
-- Helper functions are convenience functions, auxilary functions.
+- Helper functions are convenience functions, auxiliary functions.
 - Helper functions are a design concept
-- Helper funcitons often take arguments of the classes that they are helpers of.  
+- Helper functions often take arguments of the classes that they are helpers of.  
 
 We can use namespaces to identify a group of helper functions.  
     
@@ -654,11 +654,11 @@ between the points. Here I would like you implement the same solution with help 
     1. The representation should be 3 doubles representing the x,y, and z coordinates.
     2. Implement a constructor that takes in two doubles theta, and phi for the angles of the sphere.
     3. Implement a default constructor that generates a random point on a sphere.
-    4. Create a heler function that takes in two :code:`SpherePoint` and returns the great circle distance.
+    4. Create a helper function that takes in two :code:`SpherePoint` and returns the great circle distance.
 
 2. Generate an array of N random Sphere Points and find the max and min lengths.  
 
-Excercise 2
+Exercise 2
 #############################################
 
 1. Implement the leapyear() function in Chrono.cpp

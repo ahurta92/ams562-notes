@@ -33,6 +33,7 @@ void Date::add_year(int n) {
   }
   y += n;
 }
+
 bool is_date(int y, Month m, int d) {
   // assume that y is valid
   if (d <= 0)
@@ -56,6 +57,7 @@ bool is_date(int y, Month m, int d) {
     return false;
   return true;
 }
+
 bool leapyear(int y) {} // true if y is a leap year
 
 bool operator!=(const Date &a, const Date &b) { return !(a == b); }

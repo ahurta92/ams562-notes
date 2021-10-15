@@ -1,4 +1,5 @@
 class Date {
+private:
   int y, m, d; // year, month, day
 public:
   Date(int y, int m, int d); // constructor: check for valid date and intialize

@@ -14,6 +14,6 @@ private:
 };
 
 int main() {
-  // Date my_birthday{1992, 11, 24};// error no mathching constructor
+  Date my_birthday1{1992, 11, 24}; // error no mathching constructor
   Date my_birthday{1992, Month::nov, 24};
 }
