@@ -270,3 +270,41 @@ error handling.
 
 Initializing Containers
 --------------------------
+
+
+Containers exist to store elements. Therefore, we should define
+convenient ways to store stuff in the containers.
+With the current implementation, we can create a Vector with
+an appropriate size and then assign it to them,
+but there are other more elegant ways to achieve initialization.  
+
+Here are just two standard ways:
+
+- *Initializer-list constructor*: Intialize with a list of elements.
+- :code:`push_back(double)`: Adds a new element at the end of the sequence,
+
+These can be declared like this,
+
+
+.. literalinclude:: /lecture_code/classes2/Vector2.h
+    :language: cpp
+
+The push_back() function is useful for input 
+of an arbitrary number of elements.  For example:
+
+.. literalinclude:: /lecture_code/classes2/read_vector.h
+    :language: cpp
+
+
+The :code:`std::initilizer_list` used to define the initializer list constructor is a standard-library type known to the compiler.  This allows us to use a {} -list, such as {1,2,3,4}.  The compiler will create a type initializer_list to give to the program. 
+This allows us to write
+
+.. code-block:: cpp
+
+   Vector v1={1,2,3,4,5};
+   Vector v2={1.23,2,5.2};
+
+The implementation fo the initializer list constructor might look something like,
+
+.. literalinclude:: /lecture_code/classes2/init_list.h
+    :language: cpp

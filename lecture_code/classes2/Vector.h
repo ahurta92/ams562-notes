@@ -5,6 +5,7 @@ class Vector {
 
 public:
   // allocates mem on free store
+  Vector() : elem{}, sz{0} {};
   Vector(int s)
       : elem{new double[s]}, sz{s} // constructor: acquire resources
   {
