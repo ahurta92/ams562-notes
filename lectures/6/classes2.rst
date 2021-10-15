@@ -309,7 +309,7 @@ The implementation fo the initializer list constructor might look something like
 .. literalinclude:: /lecture_code/classes2/init_list.h
     :language: cpp
 
-A Container Type
+Exercises
 ##########################
 
 Part1
