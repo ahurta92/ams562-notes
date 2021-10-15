@@ -309,10 +309,11 @@ The implementation fo the initializer list constructor might look something like
 .. literalinclude:: /lecture_code/classes2/init_list.h
     :language: cpp
 
-Exercise
-----------------------
+A Container Type
+##########################
 
 Part1
+----------------------
 
 In the lecture code you will find a backbone code for hw2 part2.  
 
@@ -324,7 +325,8 @@ I have written the declarations required to build to code.
 You need to implement the function defintions in order to run the code
 and complete the assignment.
 
-part2
+Part2
+----------------------
 
 Instead of working with a naked pointer to a SpherePoint create
 a class RandomSpherePointVectors.  
