@@ -10,6 +10,8 @@ void f(complex z) {
 }
 
 int main() {
+  complex z{1, 2};
+  f(z);
   f({3, 2});
   f({1});
   f(0);

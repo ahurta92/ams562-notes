@@ -334,3 +334,286 @@ a class RandomSpherePointVectors.
 Constructor should take in an int N rand return a RandomSpherePointVectors
 of size N
 
+Abstract types
+##########################
+
+Types such as :code:`complex` and :code:`Vector` are called concrete types because 
+the representation is a part of the class definition.  Since the representation,
+(data members) is a part of the definition we are able to use these types just like
+the built-in types.  We an initialize, write, read and manipulate these objects like 
+any other built in type.
+
+
+Abstract classes are different in that the representation is not a part of their 
+definition.  Abstract classes completely separate the user from the the implementation
+details.  This is done by completely decoupling the interface of the class from 
+the implementation.  An abstract class will carry no information about the actual
+representation.  For this reason we must allocate objects on the free store and access them
+through pointers and references.  All of this will be clarified in the following.
+
+The Abstract Container
+-----------------------------------
+
+- Abstract types provide just the interface of class
+
+The first example is this abstract version for the :code:`Vector`.
+Here we are defining the interface of a class :code:`Container`
+
+.. literalinclude:: /lecture_code/classes2/Container1.h
+    :language: cpp
+
+- Class is pure interface (function declarations only)
+
+    - Definitions will be provided later in derived classes
+- :code:`virtual` means, **may be redefined later in a class derived from this one**
+
+    - A function declared :code:`virtual` is called a **virtual function**
+    - A class derived from :code:`Container` will provide the definition.
+    - :code:`=0` designates function as **pure virtual**
+    
+        - **Pure virtual** functions must be defined in a derived class
+        - These are essential pieces that all :code:`Containers` must have.
+- It is not possible to define an abstract object.
+
+Examples.
+
+.. code-block:: cpp
+
+    Container c; // error: there can be no objects of abstract class
+    Container* p=new Vector_container(10); // Okay: Container is an interface
+
+A :code:`Container` only serves as the interface that implements its:
+-   :code:`operator[]()`
+-   :code:`size()`
+functions.
+
+A class with a pure virtual function is called an **abstract class**
+
+Using :code:`Container`
+-----------------------------------
+
+This container can be used like this:
+
+.. literalinclude:: /lecture_code/classes2/use.cc
+    :language: cpp
+
+- Note how :code:`use()` uses :code:`Containers` without knowing details of the implementation.
+
+    - Knows nothing about 
+    - :code:`operator[]()`
+    - :code:`size()`
+
+A class that provides the interface to a variety of other classes is known as a **polymorphic type**
+
+
+Abstract Constructors and Destructors
+----------------------------------------
+
+- Abstract classes will not have a constructor
+
+    - Remember abstract classes do not contain representations
+- Abstract classes will have a destructor and that destructor will be :code:`virtual`
+  
+    - This allows derived classes to provide the implementation.
+
+
+:code:`class Vector_container : public Container`
+------------------------------------------------------
+
+Again, the abstract class :code:`Container` only contains interfaces 
+and no actual implementations.
+
+For :code:`Container` to be useful we need to implement a container
+that implements the functions required by the interface.
+
+Here we have an example :code:`Vector_container`
+
+.. literalinclude:: /lecture_code/classes2/Vector_container1.h
+    :language: cpp
+
+- :code:`:public` an be read as "is derived from" or "is a subtype of"
+- Class :code:`Vector_container` is said to be derived from class :code:`Container`
+
+    - :code:`Container` is the base class
+    - :code:`Vector_container` is the derived class
+- A derived class **inherits** members from its base class
+- Use of base and derived classes in known as **inheritance**
+
+
+- members :code:`operator[]()` and :code:`size()` override the corresponding members in base class :code:`Container`
+- :code:`override` makes it clear that you intend to override member from base class
+
+    - Allows the compiler to check for mistakes such as misspelling of function names.
+
+
+Destructor
+----------------------------------------
+
+- The representation of the class is :code:`Vector v`
+- The destructor overrides the base class destructor
+- The class destructor :code:`~Vector_container` implicitly  invokes member destructor :code:`~Vector()` 
+
+
+Using :code:`Vector_container`
+-----------------------------------
+
+In order for :code:`use(Container&)` to use a :code:`Container` without knowing implementation details, some
+other function will have to make the object on which it can operate.
+
+.. literalinclude:: /lecture_code/classes2/use1.cc
+    :language: cpp
+
+- Here we call the constructor :code:`vs(10)` to create a :code:`Vector_container` of size 10
+- Since :code:`use()` knows nothing about the implementation it will work just as well with a different implementation.
+
+Example is :code:`List_container`
+
+
+.. literalinclude:: /lecture_code/classes2/ListContainer1.h
+    :language: cpp
+
+- Again we are derived from :code:`Container`
+- The representation is :code:`std::list<double>`
+
+    - list of doubles
+- We provide definitions for the pure virtual functions
+
+    - :code:`operator[]()`
+    - :code:`size()`
+
+The point is that since this container implements the necessary interface
+the function :code:`use()` can use it. 
+
+.. literalinclude:: /lecture_code/classes2/use2.cc
+    :language: cpp
+
+The point is that :code:`use(Container&)` has no idea if the argument is a :code:`List_container` or a :code:`Vector_container` or
+any other kind of :code:`Container`.  It can use any kind of :code:`Container` as long as it implements the functions
+:code:`operator[]()` and :code:`size()`.
+
+- The downside is that objects must be manipulated through pointers or references.
+- This is because container do not contain local copies of the representation.  
+- We are therefore forced to work with pointers or references.
+
+
+
+Virtual Functions
+##########################
+
+Consider again the use of :code:`Container`
+
+.. literalinclude:: /lecture_code/classes2/use.cc
+    :language: cpp
+
+- How is the call :code:`c[i]` in :code:`use()` resolved to the right :code:`operator[]()`.
+
+  - In the above examples when :code:`g()` calls :code:`use()` the :code:`Vector_container`'s must be called
+  - When :code:`f()` calls :code:`use()` the List_containers version must be called.
+
+- In order for this to be possible a :code:`Container` must contain information to allow it to select the right function at a given time. 
+- This is implemented as a data structure called a **vtable** or virtual function table.
+- The compiler converts the name of a virtual function into an index into a table of pointers to functions.
+- Each class with virtual functions has its own **vtable** identifying its virtual function.
+
+The graphical representation is like this:
+
+.. image:: vtable.png
+
+For further explanation you can read the following `article <https://www.learncpp.com/cpp-tutorial/the-virtual-table/>`_.
+
+Class Hierarchies
+##########################
+
+The :code:`Container` example is a simple example of a class hierarchy.  
+A class hierarchy is a set of classes that are ordered by derivation using
+:code:`:public`.  Class hierarchies are used to represent concepts which have
+hierarchical relationships.  Such as a "A smiley faces is a kind of circle which
+is a kind of shape."
+
+Here is a semi realistic example that might exist in a graphical user interface engine.
+
+.. image:: shape_h.png
+
+The arrows represent the inheritance relationship.  :code:`Circle` is derived from class :code:`Shape`.
+
+To represent the diagram in code we must first specify the base class that defines the properties shared
+by all shapes.
+
+Shape class
+-----------------------------------
+
+.. literalinclude:: /lecture_code/classes2/Shape1.h
+    :language: cpp
+
+
+- This interface is an abstract class:
+
+    - The representation will be different for every :code:`Shape`
+- We provide each Shape with (interface):
+
+    - :code:`virtual Point center() const =0`
+    - :code:`virtual void move(Point to)= 0`
+    - :code:`virtual void draw()= 0`
+    - :code:`virtual void rotate(int angle)= 0`
+
+This allows us to write general functions that manipulate :code:`Shapes` such as.
+
+.. literalinclude:: /lecture_code/classes2/rotateall.cc
+    :language: cpp
+
+- This function will rotate all shapes healed by a the vector
+- This function takes in vector pointers to shapes.  
+- Calls on each separate implementation of rotate regardless of the type of shape.
+
+To define a particular shape, we must say that it is a shape and specify the specific properties.
+
+
+.. literalinclude:: /lecture_code/classes2/Circle1.cc
+    :language: cpp
+
+- Notice that we provide a constructor for a :code:`Circle(Point p,int rad)`
+- The representation a center and radius is added by adding private members 
+
+    - :code:`Point p`
+    - :code:`int r`
+
+- We make sure to override the necessary virtual functions.
+- This allows the :code:`rotateall()` function to call a :code:`Circle`'s implementation.
+
+We can defined another derived class :code:`Smiley`
+
+.. literalinclude:: /lecture_code/classes2/Smiley1.h
+    :language: cpp
+
+- We represent a :code:`Smiley` as a of eyes
+
+    - :code:`vector< Shape *> eyes `
+- and a mouth
+
+    - :code:`Shape *mouth`
+- These are all pointers to objects.
+- The constructor initializes the a :code:`Circle` which is used as a base for the face.
+
+Lets look at the definition of :code:`Smiley's` :code:`draw()`
+
+.. literalinclude:: /lecture_code/classes2/drawall.cc
+    :language: cpp
+
+- Since smiley is derived from :code:`Circle` it can call the :code:`Circle::draw()` to draw the base
+- For the eyes and mouth it accesses the separate draw functions through the pointers.
+
+
+
+Benefits from Hierarchies
+-----------------------------------
+
+1. Interface inheritance
+
+    - object of derived class can be used wherever an object of a base class is required.
+    - Base class acts as the interface to the derived class
+  
+2. Implementation inheritance
+
+    - A base class provides functions or data that simplifies the implementation of derived classes.
+    - Example is Circle providing the :code:`Circle::draw()` function for :code:`Smiley`
+

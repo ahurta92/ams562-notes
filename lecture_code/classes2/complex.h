@@ -18,29 +18,30 @@ public:
   void imag(double d) { im = d; }
 
   // return a reference to this
+  // a+=c
   complex &operator+=(complex z) {
     re += z.re;
-    im += z.re;
+    im += z.im;
     return *this;
   }
 
   complex &operator-=(complex z) {
     re -= z.re;
-    im -= z.re;
+    im -= z.im;
     return *this;
   }
   // On your own time write the implementation of these member
   complex &operator*=(complex);
   complex &operator/=(complex);
 };
-
+// c=a+b
 complex operator+(complex a, complex b) { return a += b; }
 complex operator-(complex a, complex b) { return a -= b; }
 complex operator-(complex a) { return {-a.real(), -a.imag()}; }
 complex operator*(complex a, complex b) { return a *= b; }
 complex operator/(complex a, complex b) { return a /= b; }
 
-bool operator==(complex a, complex b) {
+bool operator==(const complex a, const complex b) {
   return a.real() == b.real() && a.imag() == b.imag();
 }
 bool operator!=(complex a, complex b) { return !(a == b); }
