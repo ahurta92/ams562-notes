@@ -1,6 +1,6 @@
 #include "Shape1.h"
 
-class Circle : Shape {
+class Circle : public Shape {
 public:
   Circle(Point p, int rad); // Constructor
 

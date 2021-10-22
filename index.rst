@@ -157,3 +157,16 @@ Classes 2
 
 .. only:: html
 
+
+Classes 3
+================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Classes 3 
+   :name: master_class_3
+
+
+   lectures/new_lectures/essential_operations
+
+.. only:: html

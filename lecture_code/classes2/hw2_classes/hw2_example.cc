@@ -23,9 +23,9 @@ public:
   SpherePoint(double theta, double phi)
       : xx{cos(theta) * sin(phi)}, yy{sin(theta) * sin(phi)}, zz{cos(phi)} {}
   // Return x,y,z
-  double const x() { return xx; };
-  double const y() { return yy; };
-  double const z() { return zz; };
+  double x() const { return xx; };
+  double y() const { return yy; };
+  double z() const { return zz; };
 };
 // implement
 SpherePoint *generate_Nrandom_SpherePoint(int N) {

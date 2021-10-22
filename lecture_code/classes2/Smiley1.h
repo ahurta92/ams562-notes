@@ -11,7 +11,6 @@ public:
       delete p;
   }
   void move(Point to) override;
-
   void draw() const override;
   void rotate(int) override;
   void add_eye(Shape *s) { eyes.push_back(s); }
@@ -22,6 +21,7 @@ private:
   std::vector<Shape *> eyes;
   Shape *mouth;
 };
+
 void Smiley::draw() const {
   Circle::draw();
   for (auto p : eyes)

@@ -30,12 +30,13 @@ public:
 // Vector of random points on Sphere
 class SphereVector {
 private:
-  SpherePoint *pts;
+  SpherePoint *pts; // hold our array of spherepoints
   int sz;
 
 public:
   int size() const { return sz; };
   SpherePoint &operator[](int i) const { return pts[i]; };
+  SpherePoint &operator[](int i) { return pts[i]; };
   SphereVector(int s) : pts{new SpherePoint[s]}, sz{s} {
     srand(time(NULL));
     for (int i = 0; i < size(); i++) {
@@ -60,7 +61,7 @@ int main() {
   double len_i;
   double max_len{0};
   double min_len{1000};
-  for (int i = 0; i < v.size(); ++i) {
+  for (int i = 1; i < v.size(); ++i) {
     len_i = circle_length(v[0], v[i]);
     if (len_i > max_len) {
       max_len = len_i;
