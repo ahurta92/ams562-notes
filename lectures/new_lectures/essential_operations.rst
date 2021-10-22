@@ -14,17 +14,30 @@
 Essential Operations
 ########################
 
+In the last class, we discussed the notion of three different types of classes—concrete, abstract, and classes in class hierarchies.
+We discussed some of the aspects to consider when defining each of these types of classes.
+In this lesson, we will discuss some of the fundamental operations that we must reason about regardless of the type of class we are trying to define.
+These operations are known as essential operations. 
+
+In the first half of the class, we will discuss the operations related to object lifetime.
+These operations are known as the special member functions, and we will discuss these functions in great detail. 
+
+In the second half, we will consider some conventional operations that we might want to define for our classes.
+We will demonstrate how to define these operations and some of the advantages in defining these operations for our classes.  
+
 Introduction
----------------------
+########################
 
-In C++, we need to consider a set of essential operations when we design our types.
+In C++, we need to consider a set of essential operations that control the lifetime of our objects.
 These operations include construction, destruction, initialization, assignment, and copy and move.
-These operations are essential because C++ makes certain assumptions about these operations.
+If we do not define these operations on our own, C++ will provide defaults for us.
+However, we should be aware of these operations when we design our own types.
+Often, we can allow the compiler to write these defaults.
+Still, usually, when your class is a resource handle, i.e.
+, manages some heap-allocated data, we need to define the complete set of operations.  
 
-It's important to be aware of these operations when designing your own classes.
-Sometimes we can allow the compiler to write defaults for these essential operations.
-But if your class has a destructor that performs a nontrivial task, such as free-store
-deallocation, the class is likely to need the full complement of functions included in the interface.
+
+Here is the complete set of special member functions that we can define.
 
 .. literalinclude:: /lecture_code/essential_operations/essential1.cpp
     :language: cpp
@@ -55,14 +68,21 @@ An assignment uses a copy or move assignment operator.
 
 
 In principle, the other cases use a copy or move constructor.
-However, a copy or move constructor invocation is often optimized away
-constructing the object used to initialize right in the targe object. For example:
+However, a copy or move constructor invocation is often optimized by constructing the object to initialize right in the target object.
+So instead, the compiler will just call the constructor in the memory location of the object.
+For example:
 
 .. literalinclude:: /lecture_code/essential_operations/eliding_copy.cpp
     :language: cpp
 
-Here the compiler will typically construct the :code:`X` from :code:`make()` directly in :code:`x`. 
-Thus eliminating the copy.
+Example: /lecture_code/essential_operations/**eliding_copy.cpp**
+
+You can test go ahead and test this code.
+
+We might expect that calling :code:`f()` or :code:`g()` will construct an object of type :code:`X` 
+and return the object by copying this local object into :code:`x` or :code:`y`.  As you
+will see the compiler will optimize away the copy just constructing the object in :code:`x`.
+
 
 In addition to the initialization of named objects and of objects on the free store, constructors are used 
 to **initialize temporary objects** and to implement **explicit type conversion**.
@@ -86,6 +106,8 @@ about generating the default implementations you can add the keyword :code:`= de
 
 .. literalinclude:: /lecture_code/essential_operations/copy_pointer.cpp
     :language: cpp
+
+Example: /lecture_code/essential_operations/**copy_pointer.cpp**
 
 A good rule of thumb (sometimes called the rule of zero) is to either define all the essential operations or none
 using default for all).  For example.
@@ -312,7 +334,8 @@ The standard-library function :code:`move()` doesn't actually move anything.  It
 Exercise
 _______________
 
-
+Define the move assignment operations for the Vector class.
+Example: /Vector_move_assignment.cc
 
 .. literalinclude:: /lecture_code/essential_operations/Vector_move_assignment.cc
     :language: cpp
