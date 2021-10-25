@@ -33,4 +33,5 @@ int main() {
   print(x);
   f(x);
   print(x);
+  x = 8;
 }

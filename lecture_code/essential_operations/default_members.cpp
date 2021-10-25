@@ -6,3 +6,5 @@ public:
   X(const X &) = default;
   X(X &&) = default;
 };
+
+int main() { X x; }

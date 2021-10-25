@@ -192,7 +192,7 @@ The default for copying is memberwise copy: copy each member. For example when w
 complex class.
 
 
-.. literalinclude:: /lecture_code/essential_operations/complex_copy_test.h
+.. literalinclude:: /lecture_code/essential_operations/complex_copy_test.cc
     :language: cpp
 
 At the end all the complex numbers will have the same values because the initialization and the assignment 
