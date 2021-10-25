@@ -170,3 +170,16 @@ Classes 3
    lectures/new_lectures/essential_operations
 
 .. only:: html
+
+Templates 1
+================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Templates 1 
+   :name: master_templates_1
+
+
+   lectures/new_lectures/templates1
+
+.. only:: html
