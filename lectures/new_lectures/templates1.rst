@@ -163,9 +163,11 @@ On your own you should try to implement your own version of each of these:
         - No run time overhead
         - :code:`Vector<double>` is the same as the original :code:`Vector`
     - Template plus a set of template arguments is called an *instantiation* or *specialization*
+    - You cannot separate template class definitions from declarations
 
 
 .. admonition:: Exercise: HW Part 2 using Vector<T>
 
     - Use our new Vector type that we have define to try and create a Vector<SpherePoints>
     - Find the max and min arc distances of :code:`N` points on the Sphere
+

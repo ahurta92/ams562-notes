@@ -10,12 +10,7 @@ template <typename T>
 Vector<T>::Vector(int s)
 	: elem{new T[sz]}
 	, sz{s}
-{
-	for(int i = 0; i < size(); ++i)
-	{
-		elem[i] = 0;
-	}
-}
+{}
 // copy constructor
 
 template <typename T>
