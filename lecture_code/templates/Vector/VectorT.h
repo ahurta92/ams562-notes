@@ -42,10 +42,31 @@ public:
 		return sz;
 	};
 	void push_back(T);
+	/*
+	T* begin()
+	{ // check size if 0 return null else return first elem
+		return size() ? &this[0] : nullptr;
+	}
+
+	T* end()
+	{ // check size if 0 return null else return first elem+size()
+		return size() ? &this[0] + size() : nullptr;
+	}
+	T* begin() const
+	{ // check size if 0 return null else return first elem
+		return size() ? &this[0] : nullptr;
+	}
+
+	T* end() const
+	{ // check size if 0 return null else return first elem+size()
+		return size() ? &this[0] + size() : nullptr;
+	}
+	*/
 
 private:
 	T* elem; // pointing to array of type of T... complex double int
 	int sz; //
+	int capacity;
 };
 
 template <typename T>

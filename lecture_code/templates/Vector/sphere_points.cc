@@ -75,6 +75,7 @@ int main()
 
 	int N = 10000;
 
+	// Here we are generating
 	Vector<SpherePoint> pts(N);
 	double max_len = 0;
 	double min_len = 2 * M_PI;

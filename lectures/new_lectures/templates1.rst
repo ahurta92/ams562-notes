@@ -123,29 +123,48 @@ Lets use our new parameterized Vector class.
         - :code:`Vector<int>`
         - :code:`Vector<double>`
         - :code:`Vector<complex>`
-        - :code:`Vector<std::list<int>>`
     - print the vectors
             
             
-Writing helper functions and supporting ranged-based for
-``````````````````````````````````````````````````````````
+Using our Vector Class
+````````````````````````````````
 
-Last class we talked about how it if helpful to define a :code:`begin()`
-and :code:`end()` functions for containers.  Here we will illustrate
-how we can provide a definition for our new parameterized Vector.
+Here are some examples using our vector template class.  
+The first example is using our vector to hold strings.
+
+.. literalinclude:: /lecture_code/templates/Vector/write_string_vector.cc
+    :language: cpp
+
+Here we have two functions.  The first function returns a :code:`Vector<string>`
+by passing in a string and breaking up each word in the string.
+
+The second function prints our :code:`Vector<string>` by looping with the :code:`size()` function.    
+
+Supporting range-for
+````````````````````````````````
+
+We can support the range-for loop by defining :code:`begin()` and :code:`end()` functions.
+These functions need to point to the first element and one past the last element of our 
+:code:`Vector<T>`.
+
+.. literalinclude:: /lecture_code/templates/Vector/write_string_vector2.cc
+    :language: cpp
+
+- This example shows how we can write :code:`begin()` and :code:`end()` functions
+- We declare const to insure that we only get read access.
+- We can declare non-const versions of begin and end
 
 
-.. admonition:: Example: Writing Functions Using Vector Class 
-    
-    - Go to the code /lecture_code/templates/Vector/VectorT1.cc
-    - Write a function that takes in a "code:`const Vector<string>" and prints out the elements
-    - Write a :code:`begin()` and :code:`end()`
+.. admonition:: Example: Non const begin and and end functions
 
-        - :code:`begin()` should point to the first element of a :code:`Vector<T>`
-        - :code:`end()` should point to one past the last element of a :code:`Vector<T>`
-    - Use the functions to re-write the print function using a range for loop
+    - Start in `write_string_vector2.cc`
+    - Write a function that changes each string in the vector to your name
+    - Use range-for loops by providing necessary non-const begin and end functions
+  
+.. admonition:: Example: begin() and end() member functions
 
-        - The syntax for range-for is :code:`for(auto & s: vs)` where :code:`vs` is the :code:`Vector<string>`
+    - Add begin and end functions to `VectorT.h`
+    - Hint: You will need to return :code:`&this`
 
 
 Notes
@@ -170,4 +189,86 @@ On your own you should try to implement your own version of each of these:
 
     - Use our new Vector type that we have define to try and create a Vector<SpherePoints>
     - Find the max and min arc distances of :code:`N` points on the Sphere
+    - Start in `/Vector/sphere_point.cc`
+    - You will need to rewrite the generate function
 
+
+
+Value Template Arguments
+____________________________
+
+- Instead of **types** templates can also take **values**
+- Here is an example of a Buffer of variable size
+
+.. literalinclude:: /lecture_code/templates/buffer/buffer.cc
+    :language: cpp
+
+- Useful for creating arbitrary sized buffers on the stack
+- template value arguments must be a constant expression
+
+    - Evaluated at compile time
+
+
+Parameterized Operations
+____________________________
+
+- Templates can be used to parameterize operations.
+- An operation can be parameterized by a type or a value
+- 3 ways to parameterize an operations
+
+    - A function template
+    - A function object: Object that carries data but is called like an object
+    - A lambda expression: A shorthand notation to a function object
+
+
+Function Templates
+____________________________
+
+Example: Write a function that calculates the sum of the elements of any sequence that a range for
+can traverse.
+
+
+
+
+
+Function Objects
+____________________________
+
+Example: Less than function object
+
+.. literalinclude:: /lecture_code/templates/operations/Less_than.cc
+    :language: cpp
+
+- Above is a function object.
+- Notice the constructor takes in a value of type T
+- We have a call operator
+
+
+.. admonition:: Using the Less than Function
+
+    - Begin in the file :code:`/lecture_code/templates/operations/Less_than.cc`
+    - Create 3 template specializations comparing
+
+        - strings
+        - ints
+        - doubles
+    - Use your function objects
+
+Function Objects are often used as arguments to algorithms.
+
+.. admonition:: Example: Count occurrences of value for which predicate returns true
+
+    - A predicate is function that returns true or false
+    - Look in the file :code:`/lecture_code/templates/operations/count.cc`
+    - We created function count that takes in a container and predicate
+
+        - C needs to be able to use range-for
+        - P needs to be callable and return boolean
+    - Here we pass in our Less_than<T> function as the predicate
+
+.. literalinclude:: /lecture_code/templates/operations/count.cc
+    :language: cpp
+
+
+Lambda
+____________________________
