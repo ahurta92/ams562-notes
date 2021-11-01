@@ -272,3 +272,43 @@ Function Objects are often used as arguments to algorithms.
 
 Lambda
 ____________________________
+
+In the previous section we defined function objects.
+Function objects are classes which are callable by overloading
+the :code:`operator()` the call operator.
+
+Lambda Expressions are a shorthand notation for generating 
+function objects.  This allows us to generate function 
+objects where they are used in the code.
+
+Here is the Less than example using a lambda expression,
+
+.. literalinclude:: /lecture_code/templates/operations/count.cc
+    :language: cpp
+
+Capture List
+-----------------------------------
+
+- :code:`[&]` is the capture list
+
+    - We are capturing all local variables in scope
+    - :code:`[&]` specifies that we are capturing by reference
+    - :code:`[&x]` would have just captured the variable x
+    - :code:`[=]` specifies that we would like to capture by value
+    - :code:`[=x]` the variable x by value
+    - :code:`[]` capture nothing
+
+
+Parameter List
+-----------------------------------
+
+- :code:`()` is the parameter list
+
+Return Type
+-----------------------------------
+
+Return type is deduced from the function body
+
+For a useful resource on lambda expressions you look at the link
+
+`Lambda Text <https://docs.microsoft.com/en-us/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160>`_

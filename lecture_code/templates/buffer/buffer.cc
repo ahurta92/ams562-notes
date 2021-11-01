@@ -1,4 +1,5 @@
 #include <iostream>
+
 template <typename T, int N>
 struct Buffer
 {
@@ -7,6 +8,7 @@ struct Buffer
 	{
 		return N;
 	}
+	T b[N];
 };
 
 void fct()

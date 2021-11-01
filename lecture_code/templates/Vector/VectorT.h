@@ -10,6 +10,8 @@ class Vector_size_mismatch : public std::exception
 	}
 };
 
+// Vector<int> vi
+// Vector<double> vi
 template <typename T>
 class Vector
 {
@@ -42,31 +44,28 @@ public:
 		return sz;
 	};
 	void push_back(T);
-	/*
 	T* begin()
 	{ // check size if 0 return null else return first elem
-		return size() ? &this[0] : nullptr;
+		return size() ? &elem[0] : nullptr;
 	}
 
 	T* end()
 	{ // check size if 0 return null else return first elem+size()
-		return size() ? &this[0] + size() : nullptr;
+		return size() ? &elem[0] + size() : nullptr;
 	}
 	T* begin() const
 	{ // check size if 0 return null else return first elem
-		return size() ? &this[0] : nullptr;
+		return size() ? &elem[0] : nullptr;
 	}
 
 	T* end() const
 	{ // check size if 0 return null else return first elem+size()
-		return size() ? &this[0] + size() : nullptr;
+		return size() ? &elem[0] + size() : nullptr;
 	}
-	*/
 
 private:
 	T* elem; // pointing to array of type of T... complex double int
 	int sz; //
-	int capacity;
 };
 
 template <typename T>
@@ -76,19 +75,18 @@ template <typename T>
 Vector<T>::Vector()
 	: elem{nullptr}
 	, sz{0}
-{
+{}
 
+template <typename T>
+Vector<T>::Vector(int s)
+	: elem{new T[s]}
+	, sz{s}
+{
 	for(int i = 0; i != size(); ++i)
 	{
 		elem[i] = T();
 	}
 }
-
-template <typename T>
-Vector<T>::Vector(int s)
-	: elem{new T[sz]}
-	, sz{s}
-{}
 // copy constructor
 
 template <typename T>

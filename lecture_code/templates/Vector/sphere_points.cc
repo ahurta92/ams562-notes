@@ -43,19 +43,15 @@ public:
 };
 // implement
 // Change this function to take in a template specialization
-SpherePoint* generate_Nrandom_SpherePoint(int N)
+void generate_Nrandom_SpherePoint(Vector<SpherePoint>& pts)
 {
-
-	SpherePoint* pts = new SpherePoint[N];
-
 	srand(time(NULL));
-	for(int i = 0; i < N; i++)
+	for(auto& pt : pts)
 	{
 		double theta = ((double)rand() / (double)RAND_MAX) * (2 * M_PI);
 		double phi = ((double)rand() / (double)RAND_MAX) * (M_PI);
-		pts[i] = SpherePoint(theta, phi);
+		pt = SpherePoint(theta, phi);
 	}
-	return pts;
 }
 
 void print(SpherePoint p)
@@ -77,6 +73,7 @@ int main()
 
 	// Here we are generating
 	Vector<SpherePoint> pts(N);
+	generate_Nrandom_SpherePoint(pts);
 	double max_len = 0;
 	double min_len = 2 * M_PI;
 	double len_i;

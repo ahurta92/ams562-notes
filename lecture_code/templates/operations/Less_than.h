@@ -1,8 +1,8 @@
 
+
 template <typename T>
 class Less_than
 {
-
 	const T val; // value to compare against
 public:
 	Less_than(const T& v)
