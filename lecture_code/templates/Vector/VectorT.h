@@ -12,6 +12,8 @@ class Vector_size_mismatch : public std::exception
 
 // Vector<int> vi
 // Vector<double> vi
+// Vector<int> vi
+// Vector<complex> vi
 template <typename T>
 class Vector
 {
@@ -44,6 +46,7 @@ public:
 		return sz;
 	};
 	void push_back(T);
+
 	T* begin()
 	{ // check size if 0 return null else return first elem
 		return size() ? &elem[0] : nullptr;

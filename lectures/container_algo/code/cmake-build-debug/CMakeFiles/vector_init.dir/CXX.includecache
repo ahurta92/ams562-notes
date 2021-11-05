@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrian/projects/ams562/ams562-notes/lectures/container_algo/code/complex.h
+
+/home/adrian/projects/ams562/ams562-notes/lectures/container_algo/code/vector_init.cpp
+vector
+-
+complex.h
+/home/adrian/projects/ams562/ams562-notes/lectures/container_algo/code/complex.h
+

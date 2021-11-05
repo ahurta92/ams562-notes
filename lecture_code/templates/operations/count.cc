@@ -7,7 +7,7 @@ int count(const C& c, P pred)
 {
 	int cnt = 0;
 	for(const auto& x : c)
-		if(pred(x))
+		if(pred(x)) // pred(x) return true or false
 			++cnt;
 	return cnt;
 }

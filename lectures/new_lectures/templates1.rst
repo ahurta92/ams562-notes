@@ -9,7 +9,6 @@
    :backlinks: top
 
 
-.. _lec_Templates_:
 
 Class Summary and What is next
 ################################

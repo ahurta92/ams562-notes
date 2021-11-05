@@ -14,10 +14,12 @@ int count(const C& c, P pred)
 
 void f(const Vector<int>& vec, const Vector<std::string> vs, int x, const std::string& s)
 {
+	int t = 0;
 	std::cout << "number of values less than" << x << ":"
-			  << count(vec, [&](const int& a) { return a < x; }) << "\n";
+			  << count(vec, [&](const int& a) mutable { return a < t++; }) << "\n";
 	std::cout << "number of values less than" << s << ":"
 			  << count(vs, [&](const std::string& a) { return a < s; }) << "\n";
+	std::cout << t << std::endl;
 }
 // [&] is caputure list
 // all local names used in scope like x and s
