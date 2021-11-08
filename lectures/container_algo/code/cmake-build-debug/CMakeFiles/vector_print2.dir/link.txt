@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/vector_print2.dir/vector_print2.cpp.o CMakeFiles/vector_print2.dir/print_complex.cc.o CMakeFiles/vector_print2.dir/Complex.cpp.o -o vector_print2 

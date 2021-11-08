@@ -184,15 +184,28 @@ Templates 1
 
 .. only:: html
 
-Containers and Algorithms
+Containers
 ================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Containers and Algorithms 1
+   :caption: Containers
    :name: master_container_1
 
 
-   lectures/container_algo/container_algo
+   lectures/containers/containers
+
+.. only:: html
+
+Algorithms
+================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Algorithms
+   :name: master_algorithm_1
+
+
+   lectures/algorithms/algorithms
 
 .. only:: html

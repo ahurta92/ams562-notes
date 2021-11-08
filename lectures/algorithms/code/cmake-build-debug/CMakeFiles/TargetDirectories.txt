@@ -1,0 +1,14 @@
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/CMakeFiles/find2.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/CMakeFiles/predicates.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/CMakeFiles/sort_entry.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/CMakeFiles/sort_entry1.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/CMakeFiles/find3.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/CMakeFiles/sort_entry2.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/CMakeFiles/find.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/CMakeFiles/rebuild_cache.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/CMakeFiles/Tests.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/CMakeFiles/Solutions.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/CMakeFiles/vector.dir
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/CMakeFiles/edit_cache.dir

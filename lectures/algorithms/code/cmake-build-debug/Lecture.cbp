@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Lecture"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\testing\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="find2">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/find2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 find2"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="find2/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/find2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 find2/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="predicates">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/predicates" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 predicates"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="predicates/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/predicates" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 predicates/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sort_entry">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/sort_entry" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 sort_entry"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sort_entry/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/sort_entry" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 sort_entry/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sort_entry1">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/sort_entry1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 sort_entry1"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sort_entry1/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/sort_entry1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 sort_entry1/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="find3">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/find3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 find3"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="find3/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/find3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 find3/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sort_entry2">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/sort_entry2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 sort_entry2"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sort_entry2/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/sort_entry2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 sort_entry2/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="find">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/find" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 find"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="find/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/find" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 find/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tests">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 Tests"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tests/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Tests" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 Tests/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Solutions">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Solutions" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 Solutions"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Solutions/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Solutions" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 Solutions/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vector">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/vector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 vector"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="vector/fast">
+				<Option output="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/vector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 vector/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/cmake-build-debug/testing/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/entries.cpp">
+			<Option target="find2"/>
+			<Option target="predicates"/>
+			<Option target="sort_entry"/>
+			<Option target="sort_entry1"/>
+			<Option target="find3"/>
+			<Option target="sort_entry2"/>
+			<Option target="find"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/find.cpp">
+			<Option target="find"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/find2.cpp">
+			<Option target="find2"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/find3.cpp">
+			<Option target="find3"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/predicates.cpp">
+			<Option target="predicates"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/sort_entry.cpp">
+			<Option target="sort_entry"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/sort_entry2.cpp">
+			<Option target="sort_entry2"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/sort_entry_val.cpp">
+			<Option target="sort_entry1"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/testing/main.cpp">
+			<Option target="Tests"/>
+			<Option target="Solutions"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/testing/problems.cc">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/testing/problems.h">
+			<Option target="Tests"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/testing/solutions.cc">
+			<Option target="Solutions"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/testing/tests.cpp">
+			<Option target="Tests"/>
+			<Option target="Solutions"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/testing/vector_main.cpp">
+			<Option target="vector"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/testing/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\testing\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

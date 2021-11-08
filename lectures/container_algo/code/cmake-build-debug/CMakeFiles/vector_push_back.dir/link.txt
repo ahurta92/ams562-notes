@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/vector_push_back.dir/vector_push_back.cpp.o -o vector_push_back 

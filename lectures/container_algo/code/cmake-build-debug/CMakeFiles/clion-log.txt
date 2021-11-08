@@ -1,4 +1,0 @@
-/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/adrian/projects/ams562/ams562-notes/lectures/container_algo/code
--- Configuring done
--- Generating done
--- Build files have been written to: /home/adrian/projects/ams562/ams562-notes/lectures/container_algo/code/cmake-build-debug
