@@ -1,7 +1,7 @@
 #include "examples.h"
 #include <unordered_map>
 
-ostream& operator<<(ostream &os,map<string,int> m){
+ostream& operator<<(ostream &os,un<string,int> m){
 	for(const auto& e:m)// again we can iterate using range for
 		os<<e.first<<" "<<e.second<<endl;
 	// first and second to access key and value pair

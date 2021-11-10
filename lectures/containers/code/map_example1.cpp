@@ -13,6 +13,7 @@ int get_number(const string&s,map<string,int>& phone_book){
 
 int main()
 {
+
 	map<string,int> contacts = {
 		{"Adrian Hurtado", 1234567}, {"Stella Salinas", 1223442}, {"Johnny Z", 2323232}};
 	int my_puppies_number=get_number("Stella Salinas",contacts);

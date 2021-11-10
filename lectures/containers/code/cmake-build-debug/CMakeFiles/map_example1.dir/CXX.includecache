@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrian/projects/ams562/ams562-notes/lectures/containers/code/Complex.h
+
+/home/adrian/projects/ams562/ams562-notes/lectures/containers/code/examples.h
+Complex.h
+/home/adrian/projects/ams562/ams562-notes/lectures/containers/code/Complex.h
+fstream
+-
+iostream
+-
+vector
+-
+
+/home/adrian/projects/ams562/ams562-notes/lectures/containers/code/map_example1.cpp
+examples.h
+/home/adrian/projects/ams562/ams562-notes/lectures/containers/code/examples.h
+map
+-
+
