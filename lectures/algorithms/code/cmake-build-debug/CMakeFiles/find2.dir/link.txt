@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/find2.dir/find2.cpp.o CMakeFiles/find2.dir/entries.cpp.o -o find2 

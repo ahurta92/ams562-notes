@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/find.dir/find.cpp.o CMakeFiles/find.dir/entries.cpp.o -o find 

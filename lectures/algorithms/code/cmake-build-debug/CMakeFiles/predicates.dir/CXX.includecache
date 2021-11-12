@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/examples.h
+fstream
+-
+iostream
+-
+vector
+-
+list
+-
+map
+-
+algorithm
+-
+
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/predicates.cpp
+examples.h
+/home/adrian/projects/ams562/ams562-notes/lectures/algorithms/code/examples.h
+
