@@ -11,7 +11,7 @@ Write a class for polynomials that should at least contain:
 - A constructor giving the degree of the polynomial;
 - A dynamic array/vector/list of double to store the coefficients
 - A destructor; and
-- A output function for ostream
+- An output function for ostream
 
 ## Move Assignment
 
@@ -25,8 +25,29 @@ Write a class for polynomials that should at least contain:
 
 ## Initializer List
 
-- Expand the program with a constructor and an assignment operator for a intializer list.
+- Expand the program with a constructor and an assignment operator for an initializer list.
 - The degree of the polynomial should be the length of the initializer list minus one afterward.
+
+```cpp
+//input std::initializer_list<double> l
+// output Polynomial
+// We can use std::copy to copy the elements of l into our polynomial
+```
+
+## Implementing polyval std::for_each
+
+In **Matlab** you can find the function `polyval()`. which evaluates a polynomial
+for a given value `x`.  For example, to evaluate the polynomial $p(x)=x^2-1$ we first
+express the polynomial using the array `[0,-1,1]`.  To evaluate we use p(x)=0 we can write 
+`polyval([0,-1,1],1)`.  
+
+- Write your own version of polyval that takes in a double and returns the evaluated double. 
+- Write a second version which takes in a set of x values and returns a vector 
+
+
+
+
+## write an addition which adds two polynomials.
 
 
 
