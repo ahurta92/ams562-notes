@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/sort_entry.dir/sort_entry.cpp.o CMakeFiles/sort_entry.dir/entries.cpp.o -o sort_entry 

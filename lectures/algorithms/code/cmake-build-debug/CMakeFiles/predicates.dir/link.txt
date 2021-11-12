@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/predicates.dir/predicates.cpp.o CMakeFiles/predicates.dir/entries.cpp.o -o predicates 

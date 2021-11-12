@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/list_example2.dir/list_example2.cpp.o -o list_example2 
