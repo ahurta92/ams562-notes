@@ -45,9 +45,28 @@ express the polynomial using the array `[0,-1,1]`.  To evaluate we use p(x)=0 we
 - Write a second version which takes in a set of x values and returns a vector 
 
 
-
-
 ## write an addition which adds two polynomials.
+
+## Input and Output for Polynomial
+
+1. Overload the << operator for output have the format look similar to matlab
+
+```cpp
+
+Polynomial p1{1,2,4};//4x^2+2x^1+1x^0
+cout<<p1;
+```
+
+should output 
+
+```console
+[ 1 2 4 ]
+```
+
+2. Overload the input operator to read polynomials in the same form as above.
+3. Test your code by writing polynomials to a file and reading polynomials from a file
+
+
 
 
 
