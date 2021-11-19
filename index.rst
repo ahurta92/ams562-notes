@@ -209,3 +209,16 @@ Algorithms
    lectures/algorithms/algorithms
 
 .. only:: html
+
+Input/Output
+================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Input and Output
+   :name: master_algorithm_1
+
+
+   lectures/input_output/input_output
+
+.. only:: html

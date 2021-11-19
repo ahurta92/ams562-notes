@@ -9,6 +9,8 @@ build
 .ipynb_checkpoints
 a.out
 ams562_desktop.py
+*/.idea*
+lectures/input_output/code/.idea/*
 
 *.out
 lecture_code/*/.ccls-cache/*
