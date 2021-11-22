@@ -43,7 +43,7 @@ express the polynomial using the array `[0,-1,1]`.  To evaluate we use p(x)=0 we
 
 - Write your own version of polyval that takes in a double and returns the evaluated double. 
 - Write a second version which takes in a set of x values and returns a vector 
-
+  - Try using std::algorithms for_each
 
 ## write an addition which adds two polynomials.
 
@@ -67,6 +67,13 @@ should output
 3. Test your code by writing polynomials to a file and reading polynomials from a file
 
 
+## Implementing Math functions
+
+- Implement functions that add two polynomials 
+- Implement functions that subtract two polynomials
+- Implement function that multiplies two polynomials
+
+## Writing Tests Using Catch2
 
 
 

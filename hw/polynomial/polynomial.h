@@ -10,6 +10,7 @@
 class Polynomial
 {
 private:
+	// representation is order and vector holding coeffs
 	int order;
 	std::vector<double> coeffs;
 
@@ -28,8 +29,7 @@ public:
 	Polynomial(const Polynomial& p1):order{p1.order}, coeffs{p1.coeffs }{
 		std::cout<<"copy constructor"<<std::endl;
 	} ;
-	Polynomial& operator=(const Polynomial& p1){
-
+	Polynomial& operator=(const Polynomial& p1){// this is default
 		order=p1.order;
 		coeffs = p1.coeffs;
 		std::cout<<"copy assignment"<<std::endl;
@@ -44,7 +44,6 @@ public:
 		return *this;
 	}
 	Polynomial(std::initializer_list<double> l);
-
 	int size() const
 	{
 		return order;
