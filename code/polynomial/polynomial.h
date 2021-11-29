@@ -4,6 +4,7 @@
 
 #ifndef LECTURE_POLYNOMIAL_H
 #define LECTURE_POLYNOMIAL_H
+#include <cmath>
 #include <iostream>
 #include <vector>
 
@@ -16,7 +17,7 @@ private:
 
 public:
 	explicit Polynomial(int o);
-	double operator[](int o) const
+	const double operator[](int o) const
 	{
 		//return coeffs[o];//.at(o);// no bounds checking
 		return coeffs.at(o); // with bound checking
@@ -26,15 +27,19 @@ public:
 		std::cout << "this one";
 		return coeffs.at(o);
 	}
-	Polynomial(const Polynomial& p1):order{p1.order}, coeffs{p1.coeffs }{
-		std::cout<<"copy constructor"<<std::endl;
-	} ;
-	Polynomial& operator=(const Polynomial& p1){// this is default
-		order=p1.order;
-		coeffs = p1.coeffs;
-		std::cout<<"copy assignment"<<std::endl;
+	Polynomial(const Polynomial& p1)
+		: order{p1.order}
+		, coeffs{p1.coeffs}
+	{
+		std::cout << "copy constructor" << std::endl;
 	}
-
+	Polynomial& operator=(const Polynomial& p1)
+	{ // this is default
+		order = p1.order;
+		coeffs = p1.coeffs;
+		std::cout << "copy assignment" << std::endl;
+		return *this;
+	}
 
 	Polynomial& operator=(Polynomial&& p1)
 	{
@@ -65,6 +70,9 @@ public:
 		return coeffs.end();
 	}
 };
+
+double polyval(Polynomial p, double x);
+std::vector<double> polyval(Polynomial p, const std::vector<double>& x);
 
 std::ostream& operator<<(std::ostream& os, const Polynomial& p1);
 #endif //LECTURE_POLYNOMIAL_H

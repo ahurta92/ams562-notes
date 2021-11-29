@@ -25,14 +25,6 @@ ostream &operator<<(ostream &os, const vector<Entry> &v);
 istream &operator>>(istream &is, Entry &e);
 ostream &operator<<(ostream &os, const list<Entry> &lst);
 
-template <typename T>
-ostream &operator<<(ostream &os,const vector<T> &v){
-	for (auto&e:v){
-		os<<e<<" ";
-	}
-	os<<"\n";
-	return os;
-}
 
 vector<Entry> readEntries(istream &is);
 vector<Entry> readFileEntries(const string& f_name);
@@ -43,6 +35,19 @@ vector<int> read_ints(istream &is);
 
 vector <int> read_ints(istream &is,const string&terminator);
 
+
+vector <Entry> read_entries(istream &is);
+
+istream&operator>>(istream&is, vector<Entry> &v);
+
+template <typename T>
+ostream& operator<<(ostream& os, const vector<T>& v)
+{
+	for(auto &t : v){
+		os<<t <<" ";
+	}
+	return os;
+}
 
 
 #endif //LECTURE_EXAMPLES_H

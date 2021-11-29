@@ -38,3 +38,7 @@ lectures/algorithms/code/cmake-build-debug/CMakeCache.txt
 *\cmake-build-debug-wsl\*
 lectures/algorithms/code/cmake-build-debug/*
 hw/polynomial/.idea/.name
+*.xml
+lectures/utility/code/.idea/.name
+*.xml
+*.xml

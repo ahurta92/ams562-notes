@@ -222,3 +222,15 @@ Input/Output
    lectures/input_output/input_output
 
 .. only:: html
+
+Input/Output
+================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Utilities
+
+
+   lectures/utility/util
+
+.. only:: html
