@@ -225,7 +225,7 @@ Input/Output
 
 .. only:: html
 
-Input/Output
+Utilities
 ================================
 
 .. toctree::
@@ -234,5 +234,17 @@ Input/Output
 
 
    lectures/utility/util
+
+.. only:: html
+
+Numerics
+================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Utilities
+
+
+   lectures/numerics/numerics
 
 .. only:: html
