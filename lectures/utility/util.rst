@@ -29,7 +29,7 @@ Failing to release a resource can cause a leak a degrade the performance of our 
 
 The standard library components are designed not to leak resources.
 They use constructor/destructor pairs to ensure that a resource does not outlive an object responsible for it.
-An example of this is the standard library:code:`vector`.
+An example of this is the standard library :code:`vector`.
 Vector is an example of an object which acquires resources when defined in scope and releases the resource
 when the object's scope is left.
 
@@ -220,7 +220,7 @@ to adapt the function
 Lambda as Adaptors
 ############################
 
-.. admonition:: lambda_adaptor.cpp (i know i misspelled it)
+.. admonition:: lambda_adaptar.cpp (i know i misspelled it)
 
     - This code relies on the shape class defined in Shapes.h
     - We want to use the :code:`for_each` function to call each shapes draw function
@@ -228,7 +228,7 @@ Lambda as Adaptors
     - Since our vector holds a set of pointers to different shapes we need to use the :code:`x->f(x)` to call the draw function.
     - We can use a lambda function to fix the notation.
 
-.. literalinclude:: code/lambda_adaptor.cpp
+.. literalinclude:: code/lambda_adaptar.cpp
     :language: cpp
 
 

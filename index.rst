@@ -144,6 +144,8 @@ Classes 1
 
    lectures/6/classes1
 
+.. only:: html
+
 Classes 2
 ================
 
