@@ -1,16 +1,4 @@
-#ifndef LECTURE_EXAMPLES_H
-#define LECTURE_EXAMPLES_H
-
-#include <algorithm>
-#include <chrono>
-#include <forward_list>
-#include <fstream>
-#include <iostream>
-#include <memory>
-#include <stdexcept>
-#include <vector>
-
-using namespace std;
+#include "examples.h"
 
 template <typename T>
 ostream& operator<<(ostream& os, vector<T>& v)
@@ -30,5 +18,3 @@ ostream& operator<<(ostream& os, forward_list<T>& v)
 	}
 	return os;
 }
-
-#endif //LECTURE_EXAMPLES_H

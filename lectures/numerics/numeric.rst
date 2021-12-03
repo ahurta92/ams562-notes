@@ -9,10 +9,10 @@
    :backlinks: top
 
 
-.. _lec_Input_Output_:
+.. _lec_Numerics_:
 
 
-Utilities
+Numerics
 #################################################
 
 Here we will go over a helpful set of components in the C++ language.
@@ -267,163 +267,10 @@ That is, an object of type :code:`function` is a function object. For example:
     - modify the draw all example to use :code:`function`
 
 
-Type Functions
-#################
-
-A **type function** is a function that is evaluated at compile time that
-is given a type as its argument or returning a type.  The standard
-library provides type functions that help programmers take advantage of
-aspects of the language.
-
-.. admonition:: numeric_limits numerics.cpp
-
-    For numerical types, :code:`numeric_limits` from :code:`<limits>` presents a variety
-    of useful information for programming.  In the examples we investigate some of the
-    useful properties of our types.  Notice that that input argument is placed as a
-    type within the :code:`<>` brackets.  For more information check the `CPP Reference <https://en.cppreference.com/w/cpp/types/numeric_limits>`_
-
-.. literalinclude:: code/numerics.cpp
-    :language: cpp
-
-Type functions are a part of C++ that allow for compile-time computation that allow
-for better type checing and better performance.  The use of type functions is often
-called metaprogramming or template metaprogramming.  We will go over two of the standard
-library featuers :code:`iterator_traits` and **type predicates**.
 
 
 
-:code:`iterator_traits`
-#########################
-
-In this example we will show further generalize the standard algorithm sort function using
-the :code:`iterator_traits` type function.
-
-.. admonition:: sort_original.cpp
-
-    We begin with this template wrapper of the sort function that allows to sort
-    containers without having the user have to specify the :code:`begin()` and :code:`end()`
-    iterators.  The standard library takes a pair of iterators which define the sequence.
-    Additionally, those iterators must offer random access to that sequence, meaning that
-    they must be *random-access iterators*.
-
-    This fact will invalidate our template sort function for any containers that do
-    not provide *random-access iterators*.  One such example is the :code:`forward_list`
-    The :code:`forward_list` is a singly-linked list so there is not reasonable way of
-    referring back to the previous element.  For this reason we can not just use
-    our :code:`sort` function on a :code:`forward_list`.
-
-    Try compiling :code:`sort_original.cpp`.
-
-.. literalinclude:: code/sort_original.cpp
-    :language: cpp
-
-The standard library provides a mechanism, :code:`iterator_traits`, that allow us to
-check which kind of iterator is provided.  With :code:`iterator_traits` we can improve
-the range :code:`sort()` to either accept a :code:`vector` or a :code:`forward_list`.
-
-For example
-
-.. code-block:: cpp
-
-    void test(vector<int> &v , forward_list<double> &lst){
-        sort(v);
-        sort(lst);
-    }
-
-Here i will show the technique that makes this work and can be used in other examples.
 
 
-.. admonition:: sort_iterator_traits.cpp
-
-    First, we write two helper functions that take an extra argument which indicates whether they
-    are used for random-access iterator or forward iterators.
-
-    - The one for random-access iterators is trivial it simply just passes the begin and end iterators.
-    - The version for forward iterators copies the list into a vector, sorts, and then copies back.
-
-    :code:`Value_type<For>` is the type of :code:`For` 's elements, called its value type.
-    Every standard-library iterator has a member :code:`value_type`.  We get the :code:`Value_type<For>`
-    syntax by defining the type alias above the function.
-
-    For a :code:`vector<X>`,:code:`Value_type<X> is :code:`XP`.
-
-    The most important part of the code is in the selection of which helper function to use.
-    This is done in the :code:`sort` function which uses two different **type functions**.
-    The first is :code:`Iterator_type<C>` which returns the iterator_type of :code:`C` that is
-    :code:`C::iterator`
-    The second is :code:`Iterator_catergory<Iter>{}` which constructs a "tag" value indicating the
-    kind of iterator provided:
-
-    - :code:`std::random_access_iterator_tag` if :code:`C` s iterator supports random access
-    - :code:`std::forward_iterator_tag` if :code:`C` s iterator supports forward iterations
-
-    Given that, we can select between the two sorting algorithms at compile time.
-
-.. literalinclude:: code/sort_iterator_traits.cpp
-    :language: cpp
-
-This technique is called **tag dispatch** and is one of several used in the standard library and elsewhere
-to improve flexibility and performance.
 
 
-.. admonition:: Extending tags for types without member types.
-
-    We can extended this functionality for types without member types, such as pointers, the standard-library
-    supports for tag dispatch comes in the form of a class template :code:`iterator_traits` from
-    :code:`<iterator>`.  The specialization for pointer looks like this:
-
-.. literalinclude:: code/iterator_pointer.cpp
-    :language: cpp
-
-With this definition, an :code:`int*` can be used as a random-access iterator despite not having to
-a member type; :code:`Iterator_category<int*>` is :code:`random-access_iterator_tag`;
-
-Type Predicates
-#########################
-
-In :code:`<type_traits>` the standard library offers simple type functions, called **type predicates**.
-These answer fundamental questions about types.  For examples
-
-.. code-block:: cpp
-
-    bool b1=std::is_arithmetic<int>(); // yes, int is an arithmetic type
-    bool b1=std::is_arithmetic<string>(); // no, string is not an arithmetic type
-
-Other examples include
-
-- :code:`is_class`
-- :code:`is_pod`
-- :code:`is_literal_type`
-- :code:`has_virtual_destructor`
-- :code:`is_base_of`
-
-:code:`enable_if`
-#########################
-
-The obvious way of using **type predicates** includes conditions for :code:`static_asserts`, compile_time assertions
-ifs, and :code:`enable_if` s.  The standard-library :code:`enable_if`  is a widely used mechanism
-for conditionally introducing definitions.
-
-
-.. admonition:: smart_pointer.cpp Defining a smart pointer type
-
-    Consider defining a smart pointer.  We have a situtation where the pointer
-    :code:`operator->()` should only work if the template argument is a class.
-
-    .. code-block:: cpp
-
-        template<typename >
-        class Smart_pointer{
-        // ...
-        T & operator*();
-        T & operator->();// should only work if and only if T is a class
-        };
-
-    The :code:`->` should be defined if and only if :code:`T` is a class type.  For examples
-    :code:`Smart_pointer<vector<T>>` should have :code:`->` , but :code:`Smart_pointer<int>` should not.
-
-    We cannot use a compile-time :code:`if` because we are not inside a function.
-    Instead, we write
-
-    .. literalinclude:: code/smart_pointer.cpp
-         :language: cpp
