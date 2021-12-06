@@ -15,4 +15,6 @@ int main()
 {
 
 	complex<string> a;
+	complex<int> b;
+	complex<double> c;
 }

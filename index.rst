@@ -242,7 +242,7 @@ Numerics
 
 .. toctree::
    :maxdepth: 2
-   :caption: Utilities
+   :caption: Numerics
 
 
    lectures/numerics/numerics
