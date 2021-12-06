@@ -53,6 +53,8 @@ Adapting Math Functions
     In the following example I try to write a template function that takes in a value **x** and a function
     **f** and prints out **f(x)**. The value **x** has type :code:`T` and the function **f** has type :code:`function<T(T)>`.
 
+    **cmath_template1.cpp**
+
     .. literalinclude:: code/cmath_template1.cpp
         :language: cpp
 
@@ -68,6 +70,8 @@ Adapting Math Functions
     type of the function.  We can do this using a lambda function or a function objects
 
     **Lambda Adaptation**
+
+    **cmath_template2.cpp**
 
     .. literalinclude:: code/cmath_template2.cpp
         :language: cpp
@@ -101,6 +105,8 @@ Adapting Math Functions
 
     We can specialize the template function to remove the extra parentheses using the
     :code:`template<>` notation.
+
+    **cmath_template3.cpp**
 
     .. literalinclude:: code/cmath_template3.cpp
         :language: cpp
