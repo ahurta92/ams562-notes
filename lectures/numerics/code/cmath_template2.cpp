@@ -6,8 +6,16 @@
 
 using namespace std;
 
-template <typename T>
-void print(T x, std::function<T(T)> f, string fx)
+struct f1
+{
+	double operator()(double x)
+	{
+		return sin(x);
+	};
+};
+
+template <typename T, class F>
+void print(T x, F f, string fx)
 {
 	cout << "f(" << x << ") = " << f(x) << " : " << fx << endl;
 }
@@ -22,7 +30,9 @@ int main()
 	// need to give the cmath function a type by wrapping it in another function
 	//function<double(double)> f1 = sin;
 	double x = 2;
+	auto a = f1();
 	print(x, f, "sin(x)");
-	print({2, 3}, f2, "sin(x)");
+	print(complex<double>{2, 3}, f2, "sin(x)");
+	print(3.0, a, "sin(x)");
 	// at compile time we need to know the type of our funciton
 }

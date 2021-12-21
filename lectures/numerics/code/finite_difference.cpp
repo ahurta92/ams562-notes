@@ -24,7 +24,7 @@ vector<T> linspace(T a, T b, int N)
 
 template <typename C>
 using Value_type = typename C::value_type;
-
+// C is a sequence type  aka container
 template <typename C>
 C forward_difference(const C& x, const std::function<Value_type<C>(Value_type<C>)>& f)
 {

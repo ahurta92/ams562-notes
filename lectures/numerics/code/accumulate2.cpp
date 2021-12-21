@@ -27,7 +27,7 @@ int main()
 
 	//cout << "x: " << x << endl;
 	//
-	std::function<double(double)> f = [](double x) { return x * x * x * x; };
+	std::function<double(double)> f = [](double x) { return x; };
 	auto f_piecewise = [](double x) { return (x > 0) ? x : -x; };
 	auto h = x[1] - x[0];
 	// Riemann sum of f

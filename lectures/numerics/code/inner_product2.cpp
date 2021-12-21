@@ -23,7 +23,7 @@ vector<T> linspace(T a, T b, int N)
 
 int main()
 {
-	auto N_pts = 10000;
+	auto N_pts = 100000;
 
 	auto x = linspace(-M_PI / 2, M_PI / 2, N_pts);
 	auto cos_x = vector<double>(x.size());
@@ -31,7 +31,7 @@ int main()
 	auto sin_x2=vector<double>(x.size());
 	auto cos_x2=vector<double>(x.size());
 
-	// define functions y=sin(x) and y=cos(x)
+	// define functions y=sin(x) and y=cos(x)a
 	std::function<double(double)> f = [](auto a) { return sin(a); };
 	auto f1 = [](auto a) { return cos(a); };
 	// compute vectors
